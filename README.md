@@ -1,4 +1,8 @@
-<img width="468" height="28" alt="image" src="https://github.com/user-attachments/assets/ef4b6b99-7edc-4626-b5a7-4d7120894745" /># MatProGPT: Achieving Near-Perfect Fidelity in Materials Property Extraction via Multi-Modal LLMs and Dynamic Prompt Engineering
+### MatProGPT: Achieving Near-Perfect Fidelity in Materials Property Extraction via Multi-Modal LLMs and Dynamic Prompt Engineering
+
+
+![Uploading image.png…]()
+
 
 
 ## Installation
