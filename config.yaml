@@ -1,23 +1,21 @@
 # LLM
 model_name: gpt-4
-simple_model_name: gpt-3.5-turbo-16k
+simple_model_name: gpt-3.5-turbo-16k 
 
-#  openai_api_base: "https://tbnx.plus7.plus/v1"
-#  openai_api_key: "sk-VUh0cVQe6Jbtl0OND3LfghynsQFcYeEZP2snb0RwIsDm2lwb"
-
-api_key: "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"
+api_key: "add your apikey"
 
 # Local models
 local_model:
-  categorize_battery_paper: finetune/categorize_battery_paper_model
-  paragraph_classification: finetune/text_classification_model
+  categorize_battery_paper: path for Fine-tuned llm models
+  paragraph_classification: path for Fine-tuned llm models
 
 # Fine-tuned llm models (optional)
 fine_tuning_models:
-  ft_paper_categorize: ft:gpt-3.5-turbo-0125:tongji::Cgkl2hu9
-  ft_text_property_type: ft:gpt-3.5-turbo-0125:tongji::CZCJ6Vxj
-  ft_text_property_extract: ft:gpt-3.5-turbo-0125:tongji::Cg12FEYr
+  ft_paper_categorize: add Fine-tuned llm models
+  ft_text_property_type: add Fine-tuned llm models
+  ft_text_property_extract: add Fine-tuned llm models
 
+  
 # Use local models flag
 use_local_models: false
 
