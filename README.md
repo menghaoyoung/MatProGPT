@@ -1,14 +1,5 @@
-# LLM-Text: Large Language Model Text Property Miner
+<img width="468" height="28" alt="image" src="https://github.com/user-attachments/assets/ef4b6b99-7edc-4626-b5a7-4d7120894745" /># MatProGPT: Achieving Near-Perfect Fidelity in Materials Property Extraction via Multi-Modal LLMs and Dynamic Prompt Engineering
 
-## Summary
-LLM-Text is a specialized version of L2M3 designed to extract only property information from text in scientific literature, focusing on battery data. It utilizes Large Language Models (LLMs) to identify and extract property-related information from text paragraphs.
-
-## Process
-
-LLM-Text employs two specialized agents:
-
-- **Categorization Agent**: Classifies text paragraphs to identify those containing property information.
-- **Property Extraction Agent**: Extracts property data in a structured JSON format from categorized text.
 
 ## Installation
 
@@ -67,7 +58,7 @@ result.print()
 Supports fine-tuning for text categorization and property extraction using datasets in the original L2M3 finetune directory.
 
 ## Citation
-Based on L2M3: Harnessing Large Language Model to collect and analyze Metal-organic framework property dataset, J. Am. Chem. Soc. 2025, 147, 5, 3943-3958
+ 
 
 ## License
 MIT License
