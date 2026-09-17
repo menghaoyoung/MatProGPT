@@ -1,0 +1,312 @@
+{
+  "results": [
+    {
+      "doi": "10.1016_j.mtener.2020.100626",
+      "properties": [
+        {
+          "property_name": "voltage",
+          "value": "1.95",
+          "unit": "V",
+          "type": "",
+          "condition": "",
+          "compound_name": "MnO2 electrolysis process",
+          "simplified_compound_name": "",
+          "symbol": "",
+          "chemical_formula": "MnO2"
+        },
+        {
+          "property_name": "voltage",
+          "value": "2",
+          "unit": "V",
+          "type": "",
+          "condition": "",
+          "compound_name": "Cu-Mn, Bi-Mn electrolytic batteries",
+          "simplified_compound_name": "",
+          "symbol": "",
+          "chemical_formula": ""
+        },
+        {
+          "property_name": "capacity",
+          "value": "570",
+          "unit": "mAh/g",
+          "type": "gravimetric",
+          "condition": "",
+          "compound_name": "MnO2 electrolysis process",
+          "simplified_compound_name": "",
+          "symbol": "",
+          "chemical_formula": "MnO2"
+        },
+        {
+          "property_name": "energy_density",
+          "value": "400",
+          "unit": "Wh/kg",
+          "type": "",
+          "condition": "",
+          "compound_name": "Cu-Mn, Bi-Mn electrolytic batteries",
+          "simplified_compound_name": "",
+          "symbol": "",
+          "chemical_formula": ""
+        },
+        {
+          "property_name": "capacity",
+          "value": "270",
+          "unit": "mAh/g",
+          "type": "",
+          "condition": "",
+          "compound_name": "β-MnO2 nanorod electrode",
+          "simplified_compound_name": "",
+          "symbol": "",
+          "chemical_formula": "β-MnO2"
+        },
+        {
+          "property_name": "cycle_life",
+          "value": "200",
+          "unit": "cycles",
+          "type": "",
+          "condition": "",
+          "compound_name": "β-MnO2 nanorod electrode",
+          "simplified_compound_name": "",
+          "symbol": "",
+          "chemical_formula": "β-MnO2"
+        },
+        {
+          "property_name": "capacity",
+          "value": "288",
+          "unit": "mAh/g",
+          "type": "",
+          "condition": "",
+          "compound_name": "β-MnO2",
+          "simplified_compound_name": "",
+          "symbol": "",
+          "chemical_formula": "β-MnO2"
+        },
+        {
+          "property_name": "cycle_life",
+          "value": "200",
+          "unit": "cycles",
+          "type": "",
+          "condition": "",
+          "compound_name": "β-MnO2",
+          "simplified_compound_name": "",
+          "symbol": "",
+          "chemical_formula": "β-MnO2"
+        },
+        {
+          "property_name": "cycle_life",
+          "value": "1000",
+          "unit": "cycles",
+          "type": "",
+          "condition": "",
+          "compound_name": "β-MnO2",
+          "simplified_compound_name": "",
+          "symbol": "",
+          "chemical_formula": "β-MnO2"
+        },
+        {
+          "property_name": "cycle_life",
+          "value": "3000",
+          "unit": "cycles",
+          "type": "",
+          "condition": "",
+          "compound_name": "graphene scroll-coated α-MnO2",
+          "simplified_compound_name": "",
+          "symbol": "",
+          "chemical_formula": "MGS"
+        },
+        {
+          "property_name": "capacity",
+          "value": "94",
+          "unit": "%",
+          "type": "",
+          "condition": "",
+          "compound_name": "graphene scroll-coated α-MnO2",
+          "simplified_compound_name": "",
+          "symbol": "",
+          "chemical_formula": "MGS"
+        },
+        {
+          "property_name": "current_density",
+          "value": "3",
+          "unit": "A/g",
+          "type": "",
+          "condition": "",
+          "compound_name": "",
+          "simplified_compound_name": "",
+          "symbol": "",
+          "chemical_formula": ""
+        },
+        {
+          "property_name": "electrode_thickness",
+          "value": "5",
+          "unit": "nm",
+          "type": "",
+          "condition": "",
+          "compound_name": "graphene scroll-coated α-MnO2",
+          "simplified_compound_name": "",
+          "symbol": "",
+          "chemical_formula": "MGS"
+        },
+        {
+          "property_name": "cycle_life",
+          "value": "1000",
+          "unit": "cycles",
+          "type": "",
+          "condition": "",
+          "compound_name": "Ca2MnO4 cathode",
+          "simplified_compound_name": "",
+          "symbol": "",
+          "chemical_formula": "CMO"
+        },
+        {
+          "property_name": "current_density",
+          "value": "1000",
+          "unit": "A/g",
+          "type": "",
+          "condition": "",
+          "compound_name": "Ca2MnO4 cathode",
+          "simplified_compound_name": "",
+          "symbol": "",
+          "chemical_formula": "CMO"
+        },
+        {
+          "property_name": "capacity",
+          "value": "301",
+          "unit": "mAh/g",
+          "type": "",
+          "condition": "",
+          "compound_name": "Ca2MnO4 cathode",
+          "simplified_compound_name": "",
+          "symbol": "",
+          "chemical_formula": "CMO"
+        },
+        {
+          "property_name": "capacity",
+          "value": "301",
+          "unit": "mAh/g",
+          "type": "",
+          "condition": "",
+          "compound_name": "α-MnO2",
+          "simplified_compound_name": "",
+          "symbol": "",
+          "chemical_formula": ""
+        },
+        {
+          "property_name": "capacity",
+          "value": "149",
+          "unit": "Wh/kg",
+          "type": "",
+          "condition": "",
+          "compound_name": "MnO x @N-C",
+          "simplified_compound_name": "",
+          "symbol": "",
+          "chemical_formula": ""
+        },
+        {
+          "property_name": "current_density",
+          "value": "1",
+          "unit": "A/g",
+          "type": "",
+          "condition": "",
+          "compound_name": "MnO x @N-C",
+          "simplified_compound_name": "",
+          "symbol": "",
+          "chemical_formula": ""
+        },
+        {
+          "property_name": "current_density",
+          "value": "2",
+          "unit": "A/g",
+          "type": "",
+          "condition": "",
+          "compound_name": "MnO x @N-C",
+          "simplified_compound_name": "",
+          "symbol": "",
+          "chemical_formula": ""
+        }
+      ]
+    },
+    {
+      "doi": "10.1016_j.jelechem.2019.113740",
+      "properties": [
+        {
+          "property_name": "cycle_life",
+          "value": "100",
+          "unit": "cycles",
+          "type": "",
+          "condition": "",
+          "compound_name": "pristine SnS2",
+          "simplified_compound_name": "",
+          "symbol": "",
+          "chemical_formula": "SnS2"
+        }
+      ]
+    },
+    {
+      "doi": "10.1016_j.electacta.2025.146200",
+      "properties": [
+        {
+          "property_name": "electronic_conductivity",
+          "value": "high",
+          "unit": "",
+          "type": "",
+          "condition": "",
+          "compound_name": "carbon nanotubes",
+          "simplified_compound_name": "",
+          "symbol": "",
+          "chemical_formula": "CNT"
+        },
+        {
+          "property_name": "cycle_life",
+          "value": "500",
+          "unit": "cycles",
+          "type": "",
+          "condition": "",
+          "compound_name": "LiFePO4",
+          "simplified_compound_name": "",
+          "symbol": "",
+          "chemical_formula": "LiFePO4"
+        },
+        {
+          "property_name": "capacity",
+          "value": "181.5",
+          "unit": "mAh/g",
+          "type": "",
+          "condition": "0.2 A/g",
+          "compound_name": "LiFePO4",
+          "simplified_compound_name": "",
+          "symbol": "",
+          "chemical_formula": "LiFePO4"
+        },
+        {
+          "property_name": "capacity",
+          "value": "96.4",
+          "unit": "mAh/g",
+          "type": "",
+          "condition": "2.0 A/g",
+          "compound_name": "LiFePO4",
+          "simplified_compound_name": "",
+          "symbol": "",
+          "chemical_formula": "LiFePO4"
+        },
+        {
+          "property_name": "capacity",
+          "value": "923.1",
+          "unit": "mAh/g",
+          "type": "",
+          "condition": "",
+          "compound_name": "FVO/CNT composite",
+          "simplified_compound_name": "",
+          "symbol": "",
+          "chemical_formula": ""
+        },
+        {
+          "property_name": "coulombic_efficiency",
+          "value": "66.47",
+          "unit": "%",
+          "type": "",
+          "condition": "",
+          "compound_name": "FVO",
+          "simplified_compound_name": "",
+          "symbol": "",
+          "chemical_formula": ""
+        },
