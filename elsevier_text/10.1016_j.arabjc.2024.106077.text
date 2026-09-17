@@ -1,0 +1,552 @@
+================================================================================
+TITLE: Recent progress in biomass-derived carbon for alkali metal-sulfur and selenium batteries
+DOI: 10.1016/j.arabjc.2024.106077
+URL: https://doi.org/10.1016/j.arabjc.2024.106077
+PUBLISHER: ELSEVIER
+================================================================================
+
+MAIN TEXT:
+----------------------------------------
+[Paragraph 14]
+This review explores recent advancements in using biomass-derived materials for alkali metal-sulfur and selenium batteries, which are rapidly evolving in the field of high-energy-density storage systems. At the core of our discussion is the utilization of biomass-derived carbon (BDCs), emphasizing its vital role in enhancing the performance of these batteries. We examine the applications of carbon derived from biomass as hosts, extending our exploration beyond lithium-sulfur (Li-S) batteries to include a broader range of alkali metal combinations with sulfur and selenium. We emphasize the rational design and strategic use of biomass-derived materials in addressing challenges such as polysulfide and polyselenide dissolution and slow redox kinetics. The review highlights how these carbon materials contribute to high energy density and long cycling lifespans in sulfur and selenium-based batteries, enhancing stability and efficiency. Concluding with a forward-looking perspective, it identifies the ongoing need for innovation in biomass-derived carbon applications to advance alkali metal-sulfur and selenium batteries' capabilities.
+
+[Paragraph 15]
+Introduction
+
+The inexorable march towards a decarbonized future hinges critically on advancements in energy storage technologies (). As the backbone of electric mobility and grid storage solutions, these technologies need to transcend the limitations of current lithium-ion batteries (LIBs), which, despite their preeminence, inch closer to their theoretical energy capacity ceiling (). Against this backdrop, alkali metal-sulfur (AMS) batteries, spanning lithium, sodium, and potassium (Li, Na, K) paired with sulfur (S), and their selenium (Se) counterparts, stand out with their promise of higher energy densities and lower-cost materials (). (See  ).
+
+[Paragraph 16]
+AMS batteries, such as sodium-sulfur (Na-S) and potassium-sulfur (K-S) batteries, offer distinct advantages over lithium-sulfur (Li-S) systems (). Sodium and potassium are significantly more abundant than lithium, making these systems both cost-effective and more scalable for large-scale grid storage applications (). Na-S batteries, for example, have demonstrated considerable potential in large-scale energy storage due to their ability to provide high energy density, while also benefiting from lower costs associated with sodium, which is plentiful and inexpensive (). Similarly, K-S batteries are gaining traction for their even lower cost and higher theoretical capacity, although challenges like the larger ionic radius of potassium and its resulting sluggish kinetics are still areas of active research () .
+
+[Paragraph 17]
+Lithium-selenium (Li-Se) and alkali metal-selenium (AMSe) batteries introduce selenium as a promising alternative to sulfur due to its higher electronic conductivity and volumetric capacity (). Selenium-based systems are particularly attractive because of selenium's ability to overcome the low conductivity of sulfur, which plagues Li-S batteries (). The improved rate performance and the fact that selenium provides a higher volumetric capacity (3265 mA h cm-3) compared to sulfur (1675 mA h/g) make Li-Se and Na-Se batteries highly appealing (). Na-Se batteries, in particular, have shown promise due to the higher density of selenium, which improves the volumetric energy density of the cell (). Recent advancements have also explored synergistic sulfur-selenium cathodes to further enhance the performance of Li-S batteries, demonstrating the potential of combining these elements for improved electrochemical performance ().
+
+[Paragraph 18]
+However, despite these promising attributes, both AMS and AMSe systems face significant challenges. These include the poor conductivity of sulfur/selenium and their discharge products (Li2S/Li2Se), substantial volumetric expansion during discharge, and the shuttle effect caused by polysulfides/polyselenides (). The shuttle effect, in particular, leads to the migration of polysulfides or polyselenides across the electrolyte, causing active material loss and poor cycle stability. The volumetric expansion of sulfur/selenium during the charge/discharge cycle also causes structural damage to the electrode, which compromises the longevity of these batteries (). Additionally, selenium, while offering higher conductivity, still suffers from polyselenide dissolution and volume expansion, similar to sulfur, which results in low cycling stability.
+
+[Paragraph 19]
+To tackle these persistent issues, BDCs have emerged as a highly promising solution (). BDCs offer several advantages, such as high surface area, tunable porosity, and good electronic conductivity, which allow them to effectively encapsulate sulfur and selenium within their porous frameworks  (). These carbon materials can significantly improve the overall electrochemical performance of AMS and AMSe batteries by limiting the diffusion of polysulfides and polyselenides, thus mitigating the shuttle effect (). Furthermore, the sustainability and low cost of biomass-derived carbon materials align well with the economic and environmental goals of next-generation energy storage systems (). The porous nature of BDCs not only provides ample space for sulfur and selenium encapsulation but also acts as a conductive matrix, enhancing charge transfer and improving the structural integrity of the battery during cycling. This dual functionality helps address both the conductivity limitations and the volumetric expansion of sulfur and selenium, making them ideal candidates for AMS and AMSe systems ().
+
+[Paragraph 20]
+This review aims to provide a comprehensive analysis of the role of BDCs in AMS and selenium batteries. We will explore how these materials have been used to improve the performance of sulfur and selenium cathodes, including their ability to trap polysulfides/polyselenides and prevent shuttle effects. By examining the structural and chemical characteristics of these bio-based materials, we will shed light on their contributions to battery technology, pinpointing the pathways for future research that could unlock their full potential in powering next-generation energy storage devices.
+
+[Paragraph 21]
+BDCs as a S and Se host for AMS and AMSe batteries
+
+Owing to their inherent specific structures, BDCs have garnered considerable attention as promising hosts for storing sulfur and selenium in AMS and AMSe batteries (). The natural abundance and diversity of biomass offer the potential to develop a wide array of BDCs. In the subsequent subsections, we will summarize and discuss the advancements in representative BDCs, focusing on their effectiveness as carbon hosts in AMS and AMSe battery systems.
+
+[Paragraph 22]
+BDCs as a S host for AMS batteries
+
+The discharge/charge cycles in AMS batteries involve several redox reactions. During discharge, stable S8 rings react with X-ions (X = Li, Na, K), resulting in the formation of soluble polysulfides with various chain lengths. These reactions eventually produce insoluble compounds such as X2S2 and X2S for AMS batteries (). The particular reactions relevant to AMS batteries are detailed as follows:  (R1)    S 8  + 2   X  +  + 2   e  -  →  X 2   S 8        (R2)      X 2  S  8  + 2   X  +  + 2   e  -  → 4  X 2   S 6        (R3)     2  X 2  S  6  + 2   X  +  + 2   e  -  → 3  X 2   S 4        (R4)      X 2  S  4  + 2   X  +  + 2   e  -  → 2  X 2   S 2        (R5)      X 2  S  2  + 2   X  +  + 2   e  -  → 4  X 2  S
+
+[Paragraph 23]
+Due to the low electronic conductivity of sulfur and the final discharge products, X2S, it's pivotal to combine them with carbon materials. Such carbon composites facilitate efficient electron transport, thereby enhancing the overall electrical conductivity. During the discharge and charge cycles, intermediate polysulfides are prone to dissolution in the electrolyte, leading to their migration between cathode and anode-a phenomenon known as the shuttle effect, which adversely affects battery performance. The incorporation of carbonaceous hosts provides both physical and chemical impediments that mitigate or capture migrating polysulfides, thereby attenuating the shuttle effect and boosting battery performance. The strategic deployment of porous carbon structures with tailored pore configurations is crucial for the electrochemical optimization of sulfur-based cathodes. These matrices promote effective sulfur utilization and impede polysulfide shuttle effects, enhancing the battery's overall performance.
+
+[Paragraph 24]
+BDCs as a S host for Li-S batteries
+
+In the field of advanced energy storage, Li-S batteries are notable for their high theoretical energy density and eco-friendly potential. The enhancement of these batteries heavily relies on the development of effective sulfur host materials, with BDCs playing a pivotal role. These BDCs, which include microporous, mesoporous, and hierarchical porous carbon composites, are derived from a diverse range of natural and renewable biomass sources. Their structural versatility, stemming from various plant-based and organic materials, enables efficient sulfur encapsulation, reduces the shuttle effect, and improves overall electrochemical performance. This section explores the comprehensive impact of BDCs in Li-S batteries, showcasing their integral role in advancing energy storage technologies.
+
+[Paragraph 25]
+Biomass-derived microporous carbon/S composites: Microporous carbon materials, defined by their pore sizes being smaller than 2 nm, play a crucial role in enhancing the electrochemical performance of Li-S batteries. These materials are pivotal for encapsulating sulfur and restricting the diffusion of species within their confined spaces, which effectively mitigates the well-known shuttle effect. It is important to emphasize that the reaction occurring in microporous carbon is a solid-state reaction, transforming sulfur (S) to lithium sulfide (Li2S). This process avoids the formation of long-chain polysulfides, thereby circumventing the shuttle effect. The absence of these long-chain polysulfides in microporous carbon is key to enhancing the stability and efficiency of Li-S batteries. In a notable study, Caballero et al. () synthesized microporous carbon using almond shells, yielding a composite with a commendable surface area of 967 m2 g-1 and a porosity of 0.49 cm3 g-1. Impressively, this composite managed to accommodate 60 wt% of sulfur through the disulfide process. When evaluated in Li-S batteries, the composite showcased an initial specific capacity of 915 mA h/g at a current density of 100 mA/g, maintaining a capacity of 760 mA h/g after 100 cycles, with a CE surpassing 95 %. Another innovative approach carried by Wang et al. () involved the hydrothermal KOH activation and successive pyrolysis of biomass reed flowers, creating bimodal porous carbon (BPC), as depicted in  a. This BPC, characterized by its significant microporosity and high specific surface area of 1712.6 m2 g-1, markedly improved Li-S battery performance. The BPC/S cathodes exhibited outstanding cycling performance, delivering 663 mA h/g at 1 C after 1000 cycles, as illustrated in h. SEM images in b, d, c, and e display the BPC and BPC/S structures, highlighting the uniform sulfur distribution within the micropores. The BPC's unique microporous structure efficiently impregnated sulfur and minimized polysulfide escape, thereby ensuring stable cycling. The material's micropores also enhanced electronic and ionic transfer rates, as evidenced by the N2 adsorption-desorption isotherms and pore size distribution shown in f and g, further confirming BPC's suitability as a sulfur carrier in Li-S batteries. In separate research by Shi et al. (), a distinctive carbon-sulfur composite was produced using hair as a primary source, employing a melt-diffusion technique. This composite was then further enhanced by being coated with reduced graphene oxide (rGO) through an electrostatic self-assembly method. This specially designed composite exhibited high capacity, superior rate capability, and excellent cyclability in Li-S battery tests. Specifically, an electrode that comprised 69 wt% sulfur displayed an initial discharge capacity of 1113.2 mA h/g, with a maintained capacity of 989.2 mA h/g after 300 cycles at 0.2 C, and an average CE of remarkable 99.3 %. Even at a high rate of 2 C, the capacity retention was an admirable 62 %. The microporous carbon architecture of the composite played a critical role in enhancing its performance by effectively restricting the diffusion of polysulfides. This confinement within the micropores helped to minimize the shuttle effect, which is a common challenge in Li-S batteries. The microporous structure, combined with nitrogen-doping and the protective graphene layer, allowed for superior sulfur utilization and stability during cycling, thus improving both the efficiency and longevity of the battery.
+
+[Paragraph 26]
+Furthering their foray into microporous carbon materials, Presser's research group () unveiled Novolac-derived nanoporous carbon beads crafted through a self-emulsifying synthesis technique. These sub-micrometer-sized beads featured an extensive surface area of 2080 m2 g-1 due to their nanoporosity. When sulfur was integrated into these beads using a melt diffusion procedure, the resulting C/S composite was formed. This composite exhibited an impressive fifth cycle charge capacity of 880 mA h/g and consistently maintained a capacity above 600 mA h/g over 100 cycles. In parallel, Gao's research team () utilized activated apricot shell carbon with a substantial BET surface area of 2269 m2 g-1 and a pore volume of 1.05 cm3 g-1, yielding a composite with 40.7 wt% sulfur content. This method was direct and cost-effective, resulting in a design that effectively encapsulated sulfur within the micropores of the carbon matrix. The microporous architecture played a vital role in limiting polysulfide diffusion during cycling by confining sulfur within the small pore spaces, which minimized the shuttle effect. The enhanced carbon/sulfur composite demonstrated exceptional cycling stability and rate capability as a cathode material in Li-S batteries. It delivered an initial discharge capacity of 1277 mA h/g at 0.1 C and maintained a reliable discharge capacity of approximately 710 mA h/g after 200 cycles at 0.2 C. Even at a higher current density of 1 C, the composite maintained a commendable discharge capacity of 613 mA h/g. This microporous effect was crucial in ensuring sulfur retention, improving battery stability, and enhancing overall performance during long-term cycling.
+
+[Paragraph 27]
+In summary, microporous carbon materials, derived from a variety of sources, have demonstrated extraordinary electrochemical performance in Li-S batteries. These materials offer numerous benefits including efficient sulfur encapsulation, diminished species diffusion, and effective mitigation of the shuttle effect, contributing to high-capacity retention, superior rate capability, and enhanced cycling stability. These ongoing advancements in the development of these carbon-sulfur composites herald a bright future for the evolution of rechargeable batteries technology.
+
+[Paragraph 28]
+Biomass-derived mesoporous carbon/S composites: Mesoporous carbon materials derived from biomass are known for their beneficial features, especially their expansive pore sizes and optimal pore volumes. These characteristics facilitate substantial sulfur loadings, mitigate volume expansion during cycling, and enhance lithium-ion diffusion. In a particular study by Lei et al. (), they produced mesoporous carbon using moss as a biomass source via a high-temperature calcination method, followed by NaOH treatment to achieve mesoporosity. This resulted in an impressive specific surface area of 1057.1 m2 g-1 and a significant pore volume of 0.72 cm3 g-1. As a cathode material in Li-S batteries, this moss-derived carbon demonstrated a notable discharge capacity of 1070 mA h/g at 0.1 C. In a parallel investigation, Zhang and colleagues () ventured to produce a nitrogen-rich mesoporous carbon material, termed HNMC, by pyrolyzing gelatin with a streamlined templating method, achieving a surface area of 2892.6 m2 g-1 and pore volume of 2.80 cm3 g-1. Following the creation of a sulfur-HNMC composite through a melt-diffusion technique, the composite unveiled a uniform distribution of elemental sulfur within the HNMC's mesopores, boasting a sulfur composition of 53.3 wt%. Electrochemical evaluations showcased that this composite possessed an exceptional rate capability and displayed prolonged cycling stability as a cathode material for Li-S batteries. Furthermore, this composite cathode revealed a significant initial discharge capacity of 1209 mA h/g, maintaining 600 mA h/g even after an extensive 200 cycles at 1 C. The durability of the composite extended to sustain up to 300 cycles at 3 C rate.
+
+[Paragraph 29]
+Another notable study by Kang et al. () highlighted the synthesis of a unique nitrogen and oxygen dual-doped tubular carbon structure from fluffy catkins, maintaining its distinctive mesoporous architecture after carbonization and activation processes. When combined with sulfur, the resulting tube-like carbon-sulfur composite exhibited an impressive sulfur content of 82.5 wt%. This dual doping of nitrogen and oxygen amplified the material's ability to provide additional active sites and potent chemical adsorption. These features worked in tandem to counteract the polysulfide shuttle effect efficiently, optimizing sulfur utilization. Therefore, as a cathode in Li-S batteries, this carbon-sulfur composite displayed a high initial discharge capacity of 1041.70 mA h/g at 0.1 C, exhibiting a commendable capacity preservation rate of approximately 77.5 % over 500 cycles at 0.5 C. Furthermore, Faheem et al. () have made a significant contribution to the development of Co@NC, a 3D nitrogen-doped mesoporous carbon framework embedded with cobalt (Co) nanocrystals, derived from biomass. The synthesis of this innovative material was conducted through a simple pressure-cooking technique, which is schematically illustrated in  a. This illustration provides a visual representation of the Co@NC fabrication process, highlighting the key steps and components involved in creating this novel material. The Co@NC material features an oval morphology rich in mesopores, which is crucial for its application in lithium-sulfur batteries. The integration of Co nanocrystals into the 3D mesoporous carbon matrix significantly enhances the confinement and catalytic transformation of polysulfides. The distinctive 3D hollow oval structure is instrumental in alleviating volume expansion and enhancing lithium-ion transport. Further insights into the material's structure were obtained through Scanning Electron Microscopy (SEM). The SEM analysis of Co@NC, shown in b and c, revealed a highly porous 3D oval interconnected structure. This porosity is essential for accommodating the volume change during the battery's intercalation/deintercalation process, while the interconnectivity aids in ionic and electronic conductivities. The nitrogen sorption/desorption isotherms of both Co@NC and a comparison material, NC (Nitrogen-doped Carbon), indicate the presence of mesopores and micropores in both materials, as depicted in d. Co@NC exhibits a higher Brunauer-Emmett-Teller (BET) surface area and pore volume than NC, with values of 440 m2 g-1 and 0.5 cm3 g-1, respectively, compared to NC's 350 m2 g-1 and 0.30 cm3 g-1. The average pore diameter of Co@NC and NC are 7.7 nm and 3.18 nm, respectively, as shown in e, where it is evident that mesoporosity is more dominant in Co@NC.
+
+[Paragraph 30]
+Furthermore, the cycling stability of the Co@NC composite was assessed over 200 cycles, and the results, displayed in f, show commendable performance, underscoring its potential in Li-S battery applications. The high specific surface area and abundant porosity of Co@NC facilitate the accommodation of numerous active sites, improve lithium-ion transportation, enhance electrolyte penetration, accommodate volume variation during lithiation, and support high loading of active material.
+
+[Paragraph 31]
+In essence, these diverse research endeavors the exceptional promise of biomass-derived mesoporous carbon materials for advanced energy storage applications, particularly in Li-S batteries. The meticulous design of these materials, combined with proficient sulfur incorporation and strategic heteroatom doping, leads to enhanced electrochemical performance. They achieve remarkable results in terms of increased energy capacity, improved rate performance, prolonged cycling stability, and reduced capacity degradation. These collective advancements undoubtedly illuminate a promising trajectory towards the evolution of efficient and ecologically sustainable energy storage paradigms.
+
+[Paragraph 32]
+Biomass-derived hierarchical porous carbon/S composites: Hierarchical porous carbon materials possess distinct advantages due to their integration of micro-, meso-, and macropores. These unique structures serve to enhance the performance of sulfur-based cathodes in batteries considerably. The adoption of multiple pores or such hierarchical configurations has been recognized as a strategic approach to achieve unparalleled electrochemical performance. This hierarchical framework not only acts as an effective barrier against the shuttle effect but also facilitates efficient movement of both electrons and ions during cycling. Furthermore, this intricate architecture is instrumental in accommodating high sulfur loading, effectively managing the volume expansion associated with the electrochemical activity of sulfur.
+
+[Paragraph 33]
+In a notable study done by Zhang's group (), hierarchical porous carbon (HMC) was synthesized from mangosteen peels through a meticulously designed carbonization and activation process. This HMC showcased an extraordinary specific surface area of 3244 m2 g-1, accompanied by a remarkable pore volume of 1.58 cm3 g-1. Infusing up to 65 wt% of sulfur into the pores of the HMC, they crafted a cathode composite specifically tailored for Li-S batteries. This composite's distinctive morphology served as a formidable defense against the diffusion of soluble polysulfides, effectively minimizing the shuttle effect. Moreover, it competently handled the extensive volume expansion of sulfur during cycling, while enhancing overall conductivity. This composite displayed remarkable resilience, retaining 69 % of its initial discharge capacity of 870 mA h/g over 100 cycles at 0.5 C, and maintained a discharge capacity of 569.2 mA h/g at 2 C, representing a retention of 85 % of its original capacity. Building on this research, another study conducted by Xiao et al. () explored a nitrogen-doped porous carbon derived from biomass pomelo peel as a sulfur host material for Li-S batteries. The hierarchical porous architecture and polar surface introduced by N-doping offered a favorable combination of physical and chemical sulfur confinements, as well as expedited electron/ion transfer. This facilitated and stabilized sulfur electrochemistry. Consequently, the corresponding sulfur composite electrodes exhibited an ultrahigh initial capacity of 1534.6 mA h/g, a high coulombic efficiency over 98 % upon 300 cycles, and a decent rate capability up to 2 C.  a presents a schematic illustration of the synthesis process of the porous carbon/sulfur composite. b shows SEM images of PCKH and PCKH/S, revealing that after sulfur loading, most of the pores are filled, indicating the effectiveness of the porous carbon as a hosting material for sulfur. Nitrogen adsorption/desorption tests (d) confirmed the co-existence of mesoporous and microporous structures in PCKH. e illustrates the cycling performance of Li-S batteries with pomelo peel-derived porous carbon/sulfur composites as the cathode. The PCKH/S electrode achieves an ultrahigh initial discharge capacity of 1534.6 mA h/g at 0.1 C, which is close to the theoretical value and much higher than those of PCK/S (1242.5 mA h/g) and PC/S (827.3 mA h/g). After 300 cycles at 0.2 C, the discharge capacity of PCKH/S, PCK/S, and PC/S electrodes decreased to 717.5, 327.4, and 249.5 mA h/g, respectively, highlighting the superior cycling stability of PCKH/S. Moreover, PCKH/S consistently maintained a higher coulombic efficiency over 98 % compared to PCK/S and PC/S electrodes upon 300 cycles, indicating its structural superiority for inhibiting the shuttle effect and enhancing sulfur reactio reversibility through a combination of physical and chemical sulfur confinements.
+
+[Paragraph 34]
+Gao and associates (), in their exploration, devised a uniquely patterned spherical carbon structure from amylose through a multi-stage pyrolysis process that circumvented chemical etching, characterized by a micro hollow core and a microporous shell. This structure, boasting a surface area of 672 m2 g-1, proved to be a highly efficient sulfur host for Li-S batteries. It exhibited prowess in limiting polysulfide dissolution in the electrolyte while ensuring consistent electrical conductivity during the discharge/charge cycles. The pores of this unique framework harbored 48 % sulfur, and the resultant composite demonstrated an impressive initial capacity of 1490 mA h/g, and sustained 798 mA h/g over 200 cycles at 0.1 C. Remarkably, even at a high current rate of 3 C, the battery consistently delivered a capacity of 487 mA h/g.
+
+[Paragraph 35]
+Using banana peels as a raw substrate, another noteworthy endeavor by Zhang's team () resulted in the creation of a porous microcellular carbon framework, which was achieved through an ecologically conscientious biological fermentation approach. The distinctive hierarchical carbon configuration, resulting from the combined aerobic and anaerobic respiration activities of natural yeast during fermentation, in conjunction with nitrogen doping, emerged as a potent carbon host. It robustly stabilized the electrode architecture while curbing the dissolution of polysulfides during the charging and discharging processes. It was observed that the proportion of natural yeast employed had a pronounced impact on the microstructure and subsequent electrochemical properties of the carbon/sulfur composite electrode. This meticulously developed composite electrode, with a sulfur content of 74.34 wt%, showcased a robust initial reversible capacity of 1174 mA h/g at 0.1 C, demonstrating an impressive capacity retention of 58.35 % after 100 cycles.
+
+[Paragraph 36]
+Furthermore, Chen and his team () embarked on the synthesis of a honeycomb-patterned nitrogen and oxygen dual-doped porous carbon (NOPC) using soybean residue through a combination of simple carbonization and activation processes. The NOPC, exhibiting a sizable specific surface area of 2690.3 m2 g-1 and a generous pore volume of 1.34 cm3 g-1, demonstrated the merits of effective nitrogen and oxygen co-doping. The NOPC-sulfur composite cathode, infused with 64.5 wt% sulfur, displayed an outstanding initial discharge capacity of 1185.4 mA h/g at 0.2 C, and a laudable rate capability, recording 482.7 mA h/g at a demanding current density of 2 C. Over the course of cycling at 1 C, both the first and the 600th discharge capacities were impressively consistent at 698.5 mA h/g and 435.7 mA h/g, respectively, with an impressively low degradation rate of 0.063 % per cycle. Such exemplary electrochemical performance is attributed to the synergy between the hierarchical porous design and the strategic in-situ nitrogen and oxygen co-doping, which jointly serve to physically entrap and chemically adsorb lithium polysulfides.
+
+[Paragraph 37]
+In summary, the comprehensive exploration of BDCs in Li-S batteries highlights the pivotal role of microporous, mesoporous, and hierarchical porous carbon composites in advancing battery technology. These diverse carbon structures, derived from various biomass sources like almond shells, moss, mangosteen peels, and soybean residue, have been instrumental in addressing key challenges in Li-S batteries.
+
+[Paragraph 38]
+The electrochemical behavior of BDCs in Li-S batteries is heavily influenced by pore size:  ⋅ Microporous carbons (pore size < 2 nm) are particularly effective in Li-S batteries due to their ability to encapsulate sulfur and restrict polysulfide diffusion. This tight confinement minimizes the notorious shuttle effect, significantly enhancing cycling stability and improving sulfur utilization. As a result, microporous carbons are highly favored for long-term cycling, providing superior capacity retention by keeping sulfur well-confined within the carbon matrix.   ⋅ Mesoporous carbons (pore size 2-50 nm) offer larger pore volumes, which allow for higher sulfur loadings. Their larger surface area and pore structure also facilitate better ion and electrolyte diffusion, improving the overall rate performance. However, compared to microporous carbons, mesoporous structures may be less effective in completely inhibiting polysulfide migration, which can affect the long-term stability of the battery.   ⋅ Hierarchical porous carbons, combining micro-, meso-, and macropores, offer a balance between the two. These structures allow for high sulfur loading while simultaneously preventing the diffusion of polysulfides through microporous regions and improving electrolyte infiltration and ion transport through meso- and macroporous regions. This hierarchical design enhances both cycling stability and sulfur utilization, making it a highly effective architecture for sulfur-based cathodes.
+
+[Paragraph 39]
+Microporous carbons (pore size < 2 nm) are particularly effective in Li-S batteries due to their ability to encapsulate sulfur and restrict polysulfide diffusion. This tight confinement minimizes the notorious shuttle effect, significantly enhancing cycling stability and improving sulfur utilization. As a result, microporous carbons are highly favored for long-term cycling, providing superior capacity retention by keeping sulfur well-confined within the carbon matrix.
+
+[Paragraph 40]
+Mesoporous carbons (pore size 2-50 nm) offer larger pore volumes, which allow for higher sulfur loadings. Their larger surface area and pore structure also facilitate better ion and electrolyte diffusion, improving the overall rate performance. However, compared to microporous carbons, mesoporous structures may be less effective in completely inhibiting polysulfide migration, which can affect the long-term stability of the battery.
+
+[Paragraph 41]
+Hierarchical porous carbons, combining micro-, meso-, and macropores, offer a balance between the two. These structures allow for high sulfur loading while simultaneously preventing the diffusion of polysulfides through microporous regions and improving electrolyte infiltration and ion transport through meso- and macroporous regions. This hierarchical design enhances both cycling stability and sulfur utilization, making it a highly effective architecture for sulfur-based cathodes.
+
+[Paragraph 42]
+Overall, microporous carbons are typically considered the best choice for Li-S batteries because of their strong ability to confine sulfur and mitigate the shuttle effect. However, integrating mesoporous and macroporous structures alongside micropores in hierarchical porous carbons offers an excellent combination of sulfur loading, ion transport, and structural integrity during cycling, contributing to enhanced battery performance. (See  ).
+
+[Paragraph 43]
+BDCs as a S host for Na-S batteries
+
+Transitioning from Li-S to Na-S batteries represents a significant stride in the realm of energy storage technologies. Na-S batteries, with their abundant sodium resources () and similar electrochemical behavior to lithium, emerge as a promising alternative, particularly in terms of cost-effectiveness and resource availability. However, Na-S batteries also face challenges akin to their Li-S counterparts, such as the shuttle effect and poor conductivity of the electrode materials (). BDCs offer a compelling solution to these challenges. Their inherent porous structure, tailored through various biomass sources, provides an effective platform for sulfur encapsulation and facilitates enhanced electrochemical performance (). This section aims to explore the role of BDCs as sulfur hosts in Na-S batteries, delving into how their unique properties can be harnessed to overcome the specific challenges of Na-S systems and to advance the development of sustainable and efficient energy storage solutions.
+
+[Paragraph 44]
+Porous carbon materials, particularly those derived from biomass, stand out as exemplary sulfur hosts in Na-S batteries due to their hierarchical porous structure, offering a threefold advantage. Firstly, their porous nature effectively alleviates the substantial volume expansion of sulfur and prevents the shuttling of soluble polysulfides. Secondly, the carbon matrix enhances charge transfer during sulfur reduction and oxidation. Furthermore, the unique morphology of the carbonaceous matrix aids in accommodating and immobilizing sulfur. For instance, larger-size pores in the matrix ensure high-content sulfur loading, while smaller-size pores help reduce sulfur loss in the electrochemical process and prevent the shuttling effect of polysulfides. These multifaceted benefits of biomass-derived porous carbon materials underscore their potential in improving the performance and efficiency of Na-S batteries. A study conducted by Tang et al. () focused on the challenges in room-temperature Na-S batteries, particularly low sulfur utilization and poor reaction kinetics. They developed a carbon material with hierarchical pores from camellia oleifera seed cake via a delignification process followed by KOH activation. This process, depicted in  a, showcases the construction method of the carbon hosts and highlights the role of delignification. The material achieved a significant surface area (1362 m2 g-1) and high sulfur content (61.9 wt%). The SEM images (b-e) and N2 adsorption and desorption isotherms (f) illustrate the evolution from a dense structure to a porous one with numerous micropores. Pore size distribution, impacted by KOH treatment, is shown in g. The sulfur-loaded carbon cathode's performance, with a capacity of 702 mA h g-1 after 100 cycles at 0.1 C and 404 mA h g-1 at 1 C, is demonstrated in h, indicating effective sulfur and polysulfide confinement within the micropores, thus enhancing Na-S battery performance. Furthermore, Sun et al. () also made significant strides in enhancing room-temperature Na-S batteries using biomass-derived carbons. They developed hierarchical carbon particles from chitin through pyrolysis and KOH activation, loaded with sulfur for use as the cathode material. These particles exhibited a large specific surface area, enriched microporous structure, and beneficial nitrogen and oxygen self-doping. The S-cathode delivered by Sun et al. demonstrated excellent cycle stability, maintaining a capacity of 230 mA h/g after 2000 cycles at 1 A/g. Their findings, illustrated in i-p, including SEM images, N2 adsorption-desorption isotherms, and cycle stability, underscore the efficacy of chitin-derived porous carbons in RT Na-S batteries, highlighting their potential for high sulfur utilization and cycling stability.
+
+[Paragraph 45]
+In summary, BDCs for Na-S batteries have shown significant potential in enhancing battery performance. Their unique porous structures, derived from a variety of biomass sources, address critical challenges like the shuttle effect and poor conductivity of electrode materials. These developments position BDCs as a key component in advancing sustainable and efficient Na-S battery technologies. For further insights, other BDCs used in Na-S batteries are detailed in  .
+
+[Paragraph 46]
+BDCs as a S host for K-S batteries
+
+Venturing into the domain of K-S batteries marks a notable progression in energy storage technologies, paralleling the shift from Li-S to Na-S systems. K-S batteries stand out due to the natural abundance of potassium and its electrochemical similarities to lithium and sodium, presenting a viable and cost-effective alternative. Like their Li-S and Na-S counterparts, K-S batteries confront challenges including the shuttle effect and the poor conductivity of electrode materials (  ). BDCs present a viable solution to these issues. Their unique porous structure, customized via diverse biomass sources, offers an efficient matrix for sulfur hosting, enhancing electrochemical performance in K-S batteries. This section will examine the role of BDCs as sulfur hosts in K-S batteries, focusing on how their distinctive properties can address the specific challenges inherent in K-S systems, thereby promoting the development of sustainable and high-efficiency energy storage technologies.
+
+[Paragraph 47]
+Advancing the field of K-S batteries, the study by Xu et al. () represents a significant step forward. Their research introduces a microporous carbon-confined small-molecule sulfur composite cathode, specifically designed to tackle the challenges of the shuttle effect and poor conductivity in K-S batteries. This innovative cathode, utilizing a biomass-derived microporous carbon matrix, effectively encapsulates sulfur, thereby preventing the formation of soluble polysulfides. The synergistic effect of this design is clearly demonstrated in its impressive reversible capacity of 1198.3 mA h/g, which is maintained with a 72.5 % retention after 150 cycles, and a Coulombic efficiency of approximately 97 %, as depicted in  f. The study further delves into the potassium-storage mechanism, using X-ray photoelectron spectroscopy and theoretical calculations to confirm K2S as the final potassiation product, aligning with the reaction 2 K + S ↔ K2S. This key finding contributes to the understanding of the high theoretical capacity of 1675 mA h/g in K-S batteries. Additionally, this work provides a clear visualization of the cathode material's structure. a presents a schematic illustration of the formation of the microporous C/S composite, laying out the fundamental design and fabrication process of the material. SEM and TEM analyses, illustrated in b, c, d, and e, further corroborate the uniform and stable spherical morphology of the microporous carbon and the C/S composite, both exhibiting a similar particle size of approximately 500 nm. These findings highlight the structural stability and effectiveness of the biomass-derived carbon matrix as a sulfur host in the operational environment of the battery.
+
+[Paragraph 48]
+In essence, the research by Xu et al. not only introduces a novel material design for K-S batteries but also enriches our understanding of sulfur cathode behavior in these systems. Their pioneering use of biomass-derived carbons for sulfur encapsulation in K-S batteries marks a significant contribution to the development of sustainable and efficient energy storage technologies.
+
+[Paragraph 49]
+BDCs as a Se host for AMSe batteries
+
+This section highlights the role of BDCs as a host material for selenium in AMSe batteries. BDCs, known for their high surface area, engineered porosity, and excellent electrical conductivity, are poised to address key challenges in AMSe batteries such as the shuttle effect, volumetric expansion, and selenium's poor conductivity. The enhanced electrochemical performance that BDCs can offer in AMSe batteries sets the stage for the detailed discussions in the following subsections, which will focus on the application of BDCs in Li-Se (2.2.1), Na-Se (2.2.2), and K-Se (2.2.3) battery systems.
+
+[Paragraph 50]
+BDCs as a Se host for Li-Se batteries
+
+In the realm of AMSe battery technologies, Li-Se systems have emerged as a prominent area of research, largely attributed to their superior theoretical specific energy, reaching up to 1155 W h kg-1 (). Despite their potential, Li-Se batteries face critical obstacles, notably the limited conductivity of the electrode materials and the prevalent 'shuttle effect' caused by the migration of active selenium compounds (). To mitigate these issues, there has been a growing focus on integrating biomass-derived carbon materials within these batteries. These carbon materials, characterized by their intrinsic high surface area and enhanced electrical conductivity, are being utilized to counter the shuttle effect of lithium polyselenides and to bolster the conductivity of the selenium-based cathode (). This strategy not only aims to harness the advantageous properties of biomass carbons but also seeks to unlock new avenues for improving the efficiency and durability of Li-Se batteries. Ding et al. () investigated the development of hierarchically porous nitrogen-doped carbon (HPNC) for enhancing the performance of Li-Se batteries. The synthesis process, involving KOH and urea etching, is depicted in  a, showing how selenium is integrated into the HPNC structure. This resulted in a composite material with unique micro-, meso-, and macroporous characteristics. The study's SEM images, presented in b and 7c, compare the physical structures of Se/WPC and Se/HPNC composites. The nitrogen adsorption and desorption isotherms, detailed in d, alongside the pore size distribution shown in e (with an inset providing a detailed view), highlight the mesoporous nature of HPNC, emphasizing a pore size range of 3-7 nm. A key aspect of the research was assessing the Se/HPNC cathode's performance, especially given its high Se content of 67.6 wt%. This cathode maintained a discharge capacity of 410 mA h g-1 after 500 cycles at 1 C. Remarkably, at a high current density of 5 C, it still delivered a capacity of 371 mA h g-1. When the current density was reduced to 0.2 C, the capacity impressively recovered to 527 mA h g-1, with a retention rate of 90.5 %. The comparative cycling performance and Coulombic efficiency of the Se/HPNC and Se/WPC cathodes over 500 cycles at 1 C are captured in f. The study's findings underscore the potential of HPNC in improving the efficiency and longevity of Li-Se batteries, a significant stride forward in energy storage technology. Xu et al.'s () study focused on advancing Li-Se batteries using biomass-derived porous carbon, specifically employing peanut meal, a by-product of peanut oil extraction. The synthesis process, detailed in g, involved an innovative activation method where peanut meal was ground with an activator and then annealed, effectively overcoming its inherent high hydrophobicity. This process led to the creation of nitrogen-doped porous carbon (N-PC), a novel host material for Li-Se batteries. The resultant N-PC was characterized by rich nanoscale pore structures. The N2 adsorption/desorption isotherm of N-PC, indicative of a type IV isotherm and suggesting a predominance of micropores along with mesopores, is shown in i. The material exhibited a high specific surface area of 938.872 m2 g-1 and a pore volume of 0.528 cm3 g-1, with pore sizes ranging from 1 to 10 nm according to BJH analysis. In terms of electrochemical performance, the Se/N-PC composite cathode demonstrated impressive results. It delivered a specific capacity of 461.4 mA h g-1 over 250 cycles at 0.2 C, achieving a high-capacity retention of 97.2 %, as showcased in j. Even after 1000 cycles at a high current density of 2 C, the Se/N-PC composite maintained a capacity above 340.1 mA h g-1. The SEM images of N-PC, depicted in h, validate the effectiveness of the grinding and annealing method in transforming hydrophobic peanut meal into a functional porous carbon material. The three-dimensional amorphous interconnected porous structure of N-PC provides abundant Se storage sites, and its mesoporous structure facilitates lithium ion/electrolyte transport, enhancing the electrochemical properties of the Se/N-PC cathode materials. This study highlights the potential of utilizing eco-friendly biomass derivatives for improving Li-Se battery technology, representing a significant step forward in the field.
+
+[Paragraph 51]
+Ma et al. () successfully developed a porous bamboo-derived carbon (PBC) with abundant meso/micropores to encapsulate elemental selenium for use in Li-Se batteries. This PBC framework, effectively inhibiting the shuttle effect and enhancing reaction kinetics, demonstrated exceptional electrochemical performance. The Se/PBC electrode delivered an outstanding capacity of 509 mA h/g after 200 cycles at 0.2 C, with a minimal capacity fade of only 0.036 % per cycle. This remarkable stability and high capacity are attributed to the unique three-dimensional structure and enhanced conductivity of PBC. Additionally, the Se/PBC electrode showcased impressive long-term cycling stability and rate performance at high current densities, highlighting the potential of bamboo as a low-cost, efficient material for improving Li-Se battery performance.   provides Categories and cycle stability of other porous BDCs used in Li-Se batteries.
+
+[Paragraph 52]
+In summary, BDCs as a host for Li-Se batteries have shown remarkable potential in addressing the key challenges of Li-Se battery technology, such as the shuttle effect and limited conductivity. Through the integration of biomass-derived carbon materials, which feature high surface areas and enhanced electrical conductivities, researchers have successfully improved the performance and durability of Li-Se batteries. This advancement represents a significant step forward in the development of more efficient and sustainable energy storage solutions, leveraging the unique properties of BDCs to enhance battery efficiency and lifespan.
+
+[Paragraph 53]
+BDCs as a Se host for Na-Se batterie
+
+In 2013, the field of Na-Se batteries experienced a significant advancement with the pioneering work of Wang et al. (). Their innovative approach involved using mesoporous carbon as a selenium host, where selenium was infused into mesoporous carbon at 600 °C under vacuum conditions. This led to the creation of selenium-impregnated carbon composites, forming ring-structured Se8 within the carbon matrix. This development not only enhanced the battery's performance by facilitating electron transfer but also addressed the challenge of polyselenide intermediates in the electrochemical process. Following this initial breakthrough, the development of Na-Se batteries has seen substantial progress. Researchers have continued to explore and enhance various aspects of these batteries, focusing on improving their efficiency, longevity, and overall performance. Among these innovations, the stabilization of polyselenides and advancements in electrolyte formulations have been notable. Furthermore, the exploration of different carbon-based materials as hosts for selenium has been a key area of development, especially the introduction of biomass-derived carbon (). This approach leverages the unique properties of carbon derived from biomass, offering a sustainable and eco-friendly alternative to conventional carbon materials. The use of biomass-derived carbon represents a significant step in aligning Na-Se battery technology with global sustainability goals, enhancing both the environmental friendliness and the performance of these energy storage systems.
+
+[Paragraph 54]
+Li et al. () contributed a significant advancement to Na-Se battery technology by developing a titanium dioxide coated selenium/nitrogen-doped porous carbon cathode. This design addresses the shuttle effect and sluggish reaction kinetics that are challenges in Na-Se batteries. The synthesis process for obtaining the TiO2/Se@T-NPC cathode ( a) involves a detailed method. The titanium dioxide coating on this cathode plays a key role in inhibiting the shuttle effect through chemisorption of intermediates and catalyzes the conversion of polyselenides. The porous carbon derived from longan shell enhances electron transfer and buffers volume changes during cycling. FESEM images of TiO2/Se@O-NPC and TiO2/Se@T-NPC (b and c) reveal the microstructural details of these materials. The cathode showed a high capacity of 637.8 mA h/g, excellent cyclic stability, and outstanding rate performance, with 158.8 mA h/g at 2 A/g. The cyclic performance tests of Se@O-NPC, TiO2/Se@O-NPC, Se@T-NPC, and TiO2/Se@T-NPC cathodes at a current density of 0.5 A/g (d) further demonstrate the effectiveness of these materials. Furthermore, Gou et al. () developed a novel approach for Na-Se batteries by carbonizing leaves through thermal pyrolysis with melt diffusion, followed by selenium vapor deposition. This method produced a carbon-selenium composite cathode with hierarchical porosity and high mass loading. The schematic illustration of the Se-R800A free-standing electrode (e) shows the design and structure of this innovative electrode. This cathode, functioning without a binder or current collector, exhibits exceptional rate capability and high reversible specific capacity. It maintained 520 mA h/g after 120 cycles at 100 mA/g and 300 mA h/g even at 2 A/g after 500 cycles without capacity loss. FESEM images of the Se-R800A (f) provide insight into its microstructure. The cycling performance of the Se-R800A at 2 A/g (g) highlights its durability and efficiency. The natural three-dimensional structure and moderate graphitization degree of leaf-based carbon facilitate effective Na+/e- transport, ensuring high selenium utilization during discharge/charge cycles. Both Li et al.'s and Gou et al.'s works mark significant strides in enhancing the performance and sustainability of Na-Se batteries, showcasing innovative approaches to cathode design and material utilization. Other examples of biomass-derived carbon used in Na-Se batteries are presented in  .
+
+[Paragraph 55]
+In summary, BDCs as a Se host for Na-Se batteries have significantly advanced the field, notably through pioneering work that infused selenium into mesoporous carbon, enhancing electron transfer and addressing the shuttle effect. Subsequent innovations, such as titanium dioxide coated selenium/nitrogen-doped porous carbon cathodes, have further mitigated challenges like sluggish reaction kinetics, showcasing the potential of biomass-derived carbon in improving Na-Se batteries' efficiency and sustainability. These developments highlight the role of innovative material design and sustainable approaches in enhancing the performance and environmental compatibility of Na-Se batteries.
+
+[Paragraph 56]
+BDCs as a Se host for K-Se batteries
+
+In 2017, the field of K-Se (potassium-selenium) batteries witnessed a notable innovation with the work of Guo's group, who first reported a new reversible and high-performance K-Se battery system (). Their revolutionary approach featured a cathode made from confined selenium/carbonized-polyacrylonitrile (cPAN-Se) composite alongside a metallic potassium anode. This system's success was primarily attributed to the PAN-derived carbon matrix, which effectively confined small selenium molecules and provided ample buffering against volume changes during operation. This innovative design significantly mitigated the formation of polyselenides and enhanced electrochemical performance.
+
+[Paragraph 57]
+Moreover, paralleling the advancements in Na-Se batteries, the development of K-Se batteries has also benefitted from the exploration of various carbon-based materials as selenium hosts, notably including biomass-derived carbon. This direction echoes a growing trend in battery technology, where sustainable and eco-friendly materials are being sought. The integration of biomass-derived carbon into K-Se batteries harnesses its unique properties - such as high surface area and porous structure - offering a green alternative to traditional carbon sources. This not only aligns K-Se battery development with global sustainability efforts but also promises enhancements in battery performance and environmental impact. The use of biomass-derived carbon in K-Se batteries exemplifies the ongoing efforts to marry technological innovation with ecological responsibility, marking a significant stride in the field of sustainable energy storage solutions.
+
+[Paragraph 58]
+In the field of K-Se battery technology, significant advancements have been made by researchers exploring innovative approaches. Cai et al. () synthesized a novel porous carbon/Se/graphene oxide (PC/Se/GO) composite with about 40 % Se content, aiming to enhance the electrochemical performance of K-Se batteries. Their preparation process, involving carbonization, KOH activation, melt diffusion, and controlling the ionic strength for the cathode material, is detailed in a schematic illustration ( a). The effectiveness of the PC/Se/GO composite in reducing selenium's volume expansion during charge and discharge cycles is evident in SEM images (b for PC/Se and c for PC/Se/GO) and is further supported by pore size distributions and N2 adsorption/desorption isotherms (d and e). This composite demonstrates significant improvement in capacity and cycling stability, delivering discharge capacities of 426.3 mA h/g in the 2nd cycle and 316.8 mA h/g in the 150th cycle at 0.5 C, as shown in the cycling performance graph (f). Similarly, a notable contribution came from the work focused on encapsulating small-molecule selenium in N/S co-doped walnut shell-derived biomass carbon (). This approach effectively tackled volume changes during cycling and inhibited the shuttle effect. The resulting K-Se battery exhibited a stable capacity of 581.8 mA h/g after 200 cycles at 0.2 C and maintained 211.7 mA h/g after 3500 cycles at 10 C. The synthesis of the Se@PWC-NS composite and the long-cycle performance of the Se@PWC-NS and Se electrodes at 10 C are illustrated in g and h, respectively, where the capacity retention significantly surpassed that of pure selenium, highlighting the success of the encapsulation technique.
+
+[Paragraph 59]
+These studies collectively provide crucial insights for the design and optimization of K-Se battery cathodes, illustrating the potential for novel material combinations and synthesis methods to significantly enhance battery performance and longevity.
+
+[Paragraph 60]
+Conclusion and perspectives
+
+Conclusion
+
+This review has rigorously examined the role of BDCs in AMS and Selenium batteries, underscoring their effectiveness as sulfur and selenium hosts. The unique properties of BDCs, such as high surface area, engineered porosity, and superior electrical conductivity, have shown considerable promise in addressing common challenges in these battery systems, including the shuttle effect, volumetric expansion, and electrode material conductivity. By integrating BDCs into various battery configurations, substantial improvements in performance, efficiency, and sustainability have been achieved.
+
+[Paragraph 61]
+Perspectives
+
+Looking ahead, the potential of BDCs in advancing battery technology is immense. Key areas for future research include exploring diverse biomass sources for BDC production and employing cutting-edge characterization techniques. Advanced techniques such as in situ and operando spectroscopy, neutron scattering, and contemporary electrochemical characterization methods like differential electrochemical mass spectrometry (DEMS) and in situ X-ray absorption spectroscopy offer deeper insights into material properties and battery performance. Addressing scalability for commercial applications remains crucial. Emphasizing eco-friendly practices aligns with global sustainability goals, positioning BDCs as a green alternative in energy storage technologies. Further integration of BDCs with emerging battery technologies, like solid-state batteries, and focusing on specific challenges such as dendrite growth in lithium metal batteries, will broaden their applicability. The continued development of BDCs is not just promising but pivotal for meeting the growing demand for cleaner, sustainable energy solutions.
+
+[Paragraph 62]
+CRediT authorship contribution statement
+
+ Mustafa Khan: Writing - original draft, Visualization, Software, Methodology, Data curation, Conceptualization. Suxia Yan: Formal analysis. Guochun Li: Funding acquisition, Formal analysis. Junfeng Liu: Writing - review & editing, Visualization, Supervision, Resources, Investigation, Funding acquisition, Formal analysis. Mohamed R. Ali: Writing - review & editing, Visualization, Investigation, Formal analysis. Yong Wang: Writing - review & editing, Visualization, Validation, Supervision, Resources, Project administration, Investigation, Funding acquisition, Formal analysis, Conceptualization.
+
+[Paragraph 63]
+Declaration of Competing Interest
+
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+
+TABLES:
+----------------------------------------
+[Table 10]
+<ce:table colsep="0" frame="topbot" id="t0005" rowsep="0" xmlns="http://www.elsevier.com/xml/common/cals/dtd">
+<ce:label>Table 1</ce:label>
+<ce:caption id="cn0050">
+<ce:simple-para id="sp0055" view="all">Biomass source, C-rates and cycle stability of porous BDCs used in Li-S batteries.</ce:simple-para>
+</ce:caption>
+<tgroup cols="4">
+<colspec align="left" colname="col1"></colspec>
+<colspec align="left" colname="col2"></colspec>
+<colspec align="left" colname="col3"></colspec>
+<colspec align="left" colname="col4"></colspec>
+<thead>
+<row rowsep="1" valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Biomass Source</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">C-rates</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Cycle stability mA h/g/ no of cycles</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Ref.</entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Soybean sprouts</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">4 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">420/700</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0065" refid="b0235">Lin, 2023</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Watermelon rind</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">0.5 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">1176/500</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0070" refid="b0190">Kumar Nema et al., 2023</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Sweet potato flour</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">0.2 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">892.2/200</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0075" refid="b0350">Su, 2024</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Oats</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">0.5 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">250/500</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0080" refid="b0505">Yang, 2022</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Eucommia Leaf</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">0.1 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">1336/100</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0085" refid="b0490">Yang, 2023</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Natural Nori</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">1 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">454/100</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0090" refid="b0250">Liu, 2022</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Tea waste</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">2 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">677/500</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0095" refid="b0585">Zhao, 2022</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Corn kernels</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">0.5 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">579.3/500</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0100" refid="b0260">Liu, 2023</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Fallen leaves</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">0.1 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">1000/300</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0105" refid="b0055">Deng, 2023</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Waste honeycombs</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">0.2 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">538.3/500</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0110" refid="b0220">Li, 2022</cross-ref>)</entry>
+</row>
+</tbody>
+</tgroup>
+</ce:table>
+
+[Table 11]
+<ce:table colsep="0" frame="topbot" id="t0010" rowsep="0" xmlns="http://www.elsevier.com/xml/common/cals/dtd">
+<ce:label>Table 2</ce:label>
+<ce:caption id="cn0055">
+<ce:simple-para id="sp0060" view="all">Biomass source, C-rates and cycle stability of porous BDCs used in Na-S batteries.</ce:simple-para>
+</ce:caption>
+<tgroup cols="4">
+<colspec align="left" colname="col1"></colspec>
+<colspec align="left" colname="col2"></colspec>
+<colspec align="left" colname="col3"></colspec>
+<colspec align="left" colname="col4"></colspec>
+<thead>
+<row rowsep="1" valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Biomass Source</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">C-rates</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Cycle stability mA h/g/ no of cycles</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Ref.</entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Albumen</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">1 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">202/800</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0115" refid="b0340">Reddy, 2022</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Waste coffee grounds</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">0.5 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">674/200</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0120" refid="b0255">Liu, 2023</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Waste bamboo char</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">0.5 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">320/600</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0125" refid="b0245">Liu, 2021</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Waste sunflower seeds</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">1 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">330/510</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0130" refid="b0240">Liu, 2021</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Wheat bran</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">0.2 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">822/100</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0135" refid="b0580">Zhao, 2022</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Camellia shell</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">0.5 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">458/500</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0140" refid="b0305">Peng, 2023</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Store bought table sugar</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">1 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">∼300/1500</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0145" refid="b0035">Carter, 2017</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Cotton fiber</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">0.1 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">120/300</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0150" refid="b0280">Lu, 2017</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Carboxymethyl cellulose</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">0.2 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">375/200</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0155" refid="b0370">Sun, 2019</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Cardanol based benzoxazine</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">1.6 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">285/100</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0160" refid="b0100">Ghosh, 2017</cross-ref>)</entry>
+</row>
+</tbody>
+</tgroup>
+</ce:table>
+
+[Table 12]
+<ce:table colsep="0" frame="topbot" id="t0015" rowsep="0" xmlns="http://www.elsevier.com/xml/common/cals/dtd">
+<ce:label>Table 3</ce:label>
+<ce:caption id="cn0060">
+<ce:simple-para id="sp0065" view="all">Biomass source, C-rates and cycle stability of porous BDCs used in Li-Se batteries.</ce:simple-para>
+</ce:caption>
+<tgroup cols="4">
+<colspec align="left" colname="col1"></colspec>
+<colspec align="left" colname="col2"></colspec>
+<colspec align="left" colname="col3"></colspec>
+<colspec align="left" colname="col4"></colspec>
+<thead>
+<row rowsep="1" valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Biomass Source</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">C-rates</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Cycle stability mA h/g/ no of cycles</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Ref.</entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Lignin</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">0.5 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">453.1/300</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0165" refid="b0555">Zhang, 2017</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Waste coffee grounds</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">0.1 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">655/100</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0170" refid="b0565">Zhao, 2019</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Corncob</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">0.2 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">213.2/100</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0175" refid="b0520">Yangdan, 2022</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Coconut shell</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">2 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">317/900</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0180" refid="b0145">Jia, 2017</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Chitosan</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">0.24 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">446.9/100</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0185" refid="b0590">Zhao et al., 2018</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Cotton</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">0.148 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">653/100</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0190" refid="b0315">Qiu, 2020</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Peanut shell</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">2 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">376.2/500</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0195" refid="b0600">Zhao et al., 2020</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Abandoned paper cup</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">0.2 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">431.9/60</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0200" refid="b0265">Liu et al., 2018</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Pomelo peel</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">0.22 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">490/80</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0205" refid="b0360">Sun, 2015</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Pomelo peel sponge</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">0.2 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">466.8/300</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0210" refid="b0550">Zhang, 2015</cross-ref>)</entry>
+</row>
+</tbody>
+</tgroup>
+</ce:table>
+
+[Table 13]
+<ce:table colsep="0" frame="topbot" id="t0020" rowsep="0" xmlns="http://www.elsevier.com/xml/common/cals/dtd">
+<ce:label>Table 4</ce:label>
+<ce:caption id="cn0065">
+<ce:simple-para id="sp0070" view="all">Biomass source, C-rates and cycle stability of porous BDCs used in Na-Se batteries.</ce:simple-para>
+</ce:caption>
+<tgroup cols="4">
+<colspec align="left" colname="col1"></colspec>
+<colspec align="left" colname="col2"></colspec>
+<colspec align="left" colname="col3"></colspec>
+<colspec align="left" colname="col4"></colspec>
+<thead>
+<row rowsep="1" valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Biomass Source</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">C-rates</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Cycle stability mA h/g/ no of cycles</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Ref.</entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Onion waste</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">0.74 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">∼500/100</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0215" refid="b0335">Rashad and Asif, 2021</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Cooking pan waste</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">0.74 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">348/500</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0220" refid="b0015">Asif, 2022</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Poplar catkin</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">1.48 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">378.7/1600</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0225" refid="b0570">Zhao, 2021</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Sweet potato</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">0.2 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">412/500</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0230" refid="b0575">Zhao, 2022</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Porous bamboo</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">0.2 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">409/200</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0235" refid="b0290">Ma, 2020</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Cotton</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">2.9 6C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">446/500</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0240" refid="b0315">Qiu, 2020</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Chestnut inner shell</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">1.48 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">400/2000</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0245" refid="b0525">Yao, 2018</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Baby diaper</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">2.96 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">198/1000</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0250" refid="b0115">Guo, 2022</cross-ref>)</entry>
+</row>
+<row valign="top">
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">Lignin</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">0.15 C</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">568/300</entry>
+<entry xmlns="http://www.elsevier.com/xml/common/dtd">(<cross-ref id="c0255" refid="b0545">Zeng, 2022</cross-ref>)</entry>
+</row>
+</tbody>
+</tgroup>
+</ce:table>
+
+
+FIGURES:
+----------------------------------------
+[Figure 1]
+Fig. 1  Schematic representation of biomass-derived materials utilized in AMS and Selenium batteries.
+
+[Figure 2]
+Fig. 2  (a) Schematics of the synthesis of Bimodal Porous Carbon (BPC). SEM images of (b) BPC, (c) BPC/S, (d) PC, and (e) PC/S. Nitrogen adsorption-desorption isotherms of (f) BPC and PC show significant microporosity, confirming the ability of BPC to effectively encapsulate sulfur. (g) Pore size distributions of BPC and PC determined by the NLDFT method highlight the presence of micropores in BPC, which play a crucial role in limiting polysulfide diffusion and enhancing battery stability. (h) Cycling performance at a current density of 1 C for 1000 cycles of BPC/S, PC/S, and BC/S electrodes, demonstrating the superior long-term stability of BPC/S, attributed to its microporous architecture. Reproduced with permission from (Wang, 2020). Copyright 2020, Elsevier.
+
+[Figure 3]
+Fig. 3  (a) Schematic illustration of the Co@NC fabrication. SEM image of (b) Co@NC with scale bar 10 micro m and (c) with scale bar of l micro-m. (d) Nitrogen adsorption-desorption isotherms NC and Co@NC. (e) Pore size distribution curves of NC and Co@NC. (f) Cycling stability over 200 cycles of NC/S and Co@NC/S electrodes with sulfur loading 1.4 mg at 0.5 C. Reproduced with permission from (Faheem, 2021). Copyright 2021, Elsevier.
+
+[Figure 4]
+Fig. 4  (a) Schematic illustration of the synthesis process of porous carbon/sulfur composite. SEM images of (b) PCKH and (c) PCKH/S. (d) Nitrogen adsorption-desorption isotherms and pore size distributions (inset) of PCKH before and after sulfur loading. (e) Cycling performances of cells at 0.2 C with first 5 cycles at 0.1 C. Reproduced with permission from (Xiao, 2020). Copyright 2020, Elsevier.
+
+[Figure 5]
+Fig. 5  (a) Schematic illustration of construction method of the carbon hosts and the functions of delignification. SEM images of the (b) CC, (c) PCC, (d) PCCK2, and (e) PCCK2/S samples. (f) Nitrogen adsorption/ desorption isotherms of the CC, UCCK, PCC, and PCCK2 samples. (g) pore-size distributions of the CC, UCCK, PCC, and PCCK2 samples. (h) Cycling performances of the UCCK/S, PCC/S, PCCK1/S, PCCK2/S and PCCK3/S cathodes at 0.1 C. Reproduced with permission from (Tang, 2022). Copyright 2022, Elsevier. (i) Graphical Illustration of the Preparation of S/KCPs. SEM images of (j) chitin@CaCO3, (k) CPs, (l) KCPs, and (m) S/KCPs. (n) N2 adsorption-desorption isotherms of KCPs, CPs, and S/KCPs, and (o) corresponding DFT pore size distributions. (p) Cycling performances and the corresponding coulombic efficiency at 1 A/g. Reproduced with permission from (Sun, 2022). Copyright 2022, American Chemical Society.
+
+[Figure 6]
+Fig. 6  (a) Schematic illustration for the formation of microporous C/S composite. (b) SEM and (c) TEM images of the microporous carbon. (d) SEM and (e) TEM images of the microporous C/S composite. (f) cycling performance and Coulombic efficiency of C/S composite at 20 mA/g. Reproduced with permission from (Xiong, 2019). Copyright 2019, American Chemical Society.
+
+[Figure 7]
+Fig. 7  (a) Schematic illustration of preparation of Se/HPNC composite. SEM images of (b) Se/WPC composite and (c) Se/HPNC composite. (d) Adsorption and desorption isotherms of N2 and (e) pore size distribution curves of WPC, HPNC, Se/WPC composite, and Se/ HPNC composite (inset showing enlarged view of pore distribution of WPC and HPNC). (f) Cycling performance and Coulombic efficiency of Se/HPNC and Se/WPC cathodes at 1.0 C for 500 cycles. Reproduced with permission from (Deng, 2022). Copyright 2022, Springer. (g) Schematic illustration of the synthesis process of Se/N-PC. (h) SEM images of N-PC. (i) N2 adsorption/desorption isotherms of the N-PC and the inset of panel N-PC. (j) long-term cyclability of Se/N-PC and Se/N-C at 2 C. Reproduced with permission from (Xu, 2023). Copyright 2023, Walter de Gruyter GmbH.
+
+[Figure 8]
+Fig. 8  (a) Schematic illustration of the synthesis process for obtaining the TiO2/Se@T-NPC cathode. FESEM images of (b) TiO2/Se@O-NPC and (c) TiO2/Se@T-NPC. (d) Cyclic performance tests of Se@O-NPC, TiO2/Se@O-NPC, Se@T-NPC, and TiO2/Se@T-NPC cathodes at current densities of (a) 0.5 A/g. Reproduced with permission from (Li, 2023). Copyright 2023, Springer. (e) Schematic illustration of the Se-R800A free-standing electrode. (f) FESEM images of the Se-R800A. (g) Cycling performance of the Se-R800A at 2 A/g. Reproduced with permission from (Guo, 2019). Copyright 2019, Springer.
+
+[Figure 9]
+Fig. 9  (a) Schematic illustration of the preparation of PC/Se/GO. SEM of (b) PC/Se, (c) PC/Se/GO. (d) pore size distributions and (e) N2 adsorption/desorption isotherms of PC, PC/Se, PC/Se/GO. (f) Cycling performance of PC/Se/GO operated at 0.5 C. Reproduced with permission from (Cai, 2020) Copyright 2020, Wiley-VCH. (g) The synthesis illustration of the Se@PWC-NS composite. (h) Long-cycle performance of Se@PWC-NS and Se electrodes at 10 C charge-discharge. Reproduced with permission from (Wang, 2022). Copyright 2022, Elsevier.
+

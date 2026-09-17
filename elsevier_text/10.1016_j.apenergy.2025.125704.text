@@ -1,0 +1,1830 @@
+================================================================================
+TITLE: Performance characterization of lithium-ion battery cells within restricted operating range using an extended ragone plot
+DOI: 10.1016/j.apenergy.2025.125704
+URL: https://doi.org/10.1016/j.apenergy.2025.125704
+PUBLISHER: ELSEVIER
+================================================================================
+
+MAIN TEXT:
+----------------------------------------
+[Paragraph 12]
+Lithium-ion battery systems play a crucial role in applications ranging from electric vehicles to grid storage, but their performance can vary significantly under different operating conditions. While extensive research has explored the non-linear relationship of the battery's key performance metrics - energy and power - across the manufacturers' permissible limits, the impacts of operating in a restricted range have not yet been sufficiently investigated. Restricting the available operating range, particularly the upper voltage limit, may be advantageous or even necessary for specific applications with harsh environmental conditions, potentially enhancing safety, efficiency, compatibility, and lifespan without substantially compromising performance. In order to investigate this trade-off, the power-based performance of three battery cells with different formats and chemistries is experimentally characterized and analyzed using an extended Ragone plot. To reduce experimental effort, we demonstrate a reconstruction-based approach to recalculate the Ragone plot for arbitrary voltage initialization limits by trimming the full-range dataset based on the preceding charge termination conditions. In the practically relevant range, deviations between the measured and reconstructed Ragone curves remain within   ≤  3  % , validated by an electrical and thermal assessment. By superimposing upper and lower operating limits, the extended Ragone plot enables an evaluation of battery performance under a restricted range without additional cell characterization measurements. Our findings thus provide a practical and efficient method for engineers and researchers, ideally supporting the decision-making in selecting, designing, or managing battery systems for application-specific energy storage solutions.
+
+[Paragraph 13]
+Graphical Abstract
+
+      
+
+Data availability
+
+The measurement data of this study are openly available here: https://doi.org/10.5281/zenodo.14214784.
+
+Nomenclature
+
+Acronyms
+
+carbon (graphite)
+
+current rate
+
+constant current
+
+constant power
+
+constant voltage
+
+extended Ragone plot
+
+incremental capacity
+
+lithium cobalt oxide
+
+lithium iron phosphate
+
+lithium manganese oxide
+
+lithium titanium oxide
+
+lithium nickel cobalt aluminium oxide
+
+lithium nickel manganese cobalt oxide
+
+open circuit voltage
+
+solid-electrolyte interphase
+
+Symbols
+
+depth-of-discharge (  -  )
+
+pseudo-OCV, measured from cyclization at constant low charge/discharge rate (  V  )
+
+state-of-charge (  -  )
+
+state-of-energy (  -  )
+
+number/index of set power variation (  -  )
+
+number/index of cut-off voltage variation (  -  )
+
+temperature (     ∘   C  )
+
+energy (  Wh  )
+
+current (  A  )
+
+power (  W  )
+
+current capacity (  Ah  )
+
+internal resistance (  A  )
+
+absolute temperature (  K  )
+
+time (  s  )
+
+voltage (  V  )
+
+Indices
+
+average value (between charge and discharge direction)
+
+charge direction
+
+discharge direction
+
+value at ambient conditions
+
+cell-based value
+
+termination/cut-off/"end-of-" value
+
+initialization/"begin-of-" value
+
+maximum value
+
+minimum value
+
+nominal value
+
+pulse value
+
+switch point in termination from voltage to current limit
+
+non-available/reduced/deficit value
+
+Operators
+
+differential operator
+
+difference between two values
+
+relative deviation/normalized difference between two values
+
+universal symbol placeholder
+
+function notation
+
+Introduction
+
+The present work focuses on the power-based characterization of different lithium-ion batteries within a restricted operating range and investigates the influence on their key performance indicators, i.e., energy ( E ) and power ( P ), in a Ragone plot. To ensure safe operation and protect their battery from damage, cell manufacturers specify permissible limits for all relevant electrical and thermal operating variables, including voltage ( U ), current ( I ), or temperature ( ϑ ). The cell voltage   U  cell   , representing the electrical potential variable of this energy storage device, significantly influences the performance characteristics of the battery. Its full operating range is defined by a minimum (  U  cell , min   ) and maximum (  U  cell , max   ) voltage limit to prevent overdischarge  and overcharge , which could lead to safety issues by material decomposition , lithium plating  or internal short circuits  and finally trigger exothermic side reactions, also known as thermal runaway . The specific values of both limits depend on the battery's material chemistry and internal structure, varying by cell type.
+
+[Paragraph 15]
+Within this safe operating range   [  U  cell , min   ,  U  cell , max   ]  , the nominal capacity (  Q  cell , n   ) or the nominal energy (  E  cell , n   ) of the battery can be discharged under nominal conditions. Especially in an application context, instead of voltage, the available operating range of a cell is frequently normalized to the interval   [ 0 , 1 ]  , either as a state of charge (  SoC  ) with   Q  cell , n    or as a state of energy (  SoE  ) with   E  cell , n   . Additionally, depth of discharge (  DoD  ) is often used to describe the cell's cyclization range, typically referring to a fully charged (   SoC   cell   = 100  % ) or an average state within this range. Depending on the literature, particularly application-oriented works, these state descriptors SoC, SoE, and DoD are occasionally used to specify the operating range of the battery cell instead of the cell voltage   U  cell   .
+
+[Paragraph 16]
+However, the battery's voltage behavior is critical from a safety perspective. While the minimum and maximum voltage limits protect against irreversible damage, further restricting the available operating range for specific applications or harsh environmental conditions may be advantageous or even necessary. Such restrictions can help lower the risk of unsafe conditions, enhance the battery's efficiency and system compatibility, and extend its lifespan.
+
+[Paragraph 17]
+Numerous empirical studies at the cell level have investigated the effects of increasing the lower voltage limit and decreasing the upper voltage limit on different aspects of degradation. For instance, float current analyses with commercial NMC   |   C-, LFP   |   C-, and NCA   |   C-based battery cells have shown that growth of the solid-electrolyte interphase (SEI) passivation layer dominates calendar aging towards both their voltage limits . Cyclic aging has also been extensively studied, particularly in NMC   |   C cells, where lithium inventory loss, driven primarily by SEI growth, is strongly influenced by higher DoD operating ranges , and their charge-transfer resistances increased significantly at higher cell voltage . In contrast, LFP   |   C cells exhibit pronounced capacity fade at high voltages, regardless of the DoD range , while NCA   |   C cells, especially under low temperatures, reveal accelerated aging when expanding their operating range towards one or both voltage limits . Various modeling approaches, e.g., based on degradation maps , Wöhler curves  or degradation modes  have already attempted to generalize these findings, showing a disproportionate increase in degradation rate, with most cell chemistries degrading faster at high SoC, while some also degrade faster at low SoC. Despite gaps in mechanistic understanding and the need to harmonize findings across these studies, an evident correlation between the operating range restriction and a significant deceleration in capacity fade and resistance increase is found, resulting in improved cycling stability for all battery cells. Consequently, careful DoD management is essential for extending cycle life and thus reducing operating costs .
+
+[Paragraph 18]
+Efficiency considerations further support the case for restricting the operating range. Studies have found a rapid decline in energy efficiency with decreasing DoD range  and a drop in Coulombic efficiency when lowering the discharge cut-off voltage, especially in low-temperature environments . These effects are often linked to the characteristic tub-shaped curve of the battery's internal resistance as a function of SoC, where resistance increases significantly near one or both operating limits and rises sharply in overcharge conditions[cf. ,].
+
+[Paragraph 19]
+From a system design and integration perspective, restricting the operating range may also be necessary to ensure compatibility between battery cells and other system components. Suppose the battery cell's full-range performance characteristics do not align with the available operating range of the power electronics or other interconnected devices. In that case, engineers can facilitate system integration by reducing the cell's usable operating range during the design process, ensuring that all system requirements are efficiently met[cf. .
+
+[Paragraph 20]
+Operational management strategies, such as derating and fast charging protocols, are crucial for dynamically controlling and adjusting battery operating parameters to enhance safety and extend system lifespan. Exemplary derating strategies include SoC-based power derating, known as "limp home" mode in electric vehicles , to ensure battery operation within safe limits even under stress, or degradation-aware current  and cut-off voltage derating , likewise facilitating thermal management. Fast charge protocols focus on adapting the maximum cut-off voltage to minimize temperature rise and degradation , e.g., by indirect control of the negative electrode polarization . Moreover, operating range restrictions are essential for optimizing resource allocation in multi-use battery storage systems, such as reserving energy and power bands for specific functions like peak shaving or frequency containment reserve .
+
+[Paragraph 21]
+Despite the clear benefits of restricting the operating range for safety, efficiency, compatibility, and lifespan, it would inevitably reduce the achievable capacity and energy of the battery, potentially leading to more extensive system designs with increased weight, volume, and costs. It is, therefore, crucial to find a suitable trade-off for adapting the usable operating range and balancing these aspects optimally in order to meet the performance requirements of each specific energy storage application.
+
+[Paragraph 22]
+When it comes to the decision-making of such trade-offs, the Ragone plot, named after the work of Ragone , serves as an efficient concept for evaluation, comparison, and visualization of different energy storage technologies in terms of their key performance metrics,  E  and  P . It represents the characteristic non-linear relationship between these metrics by an enveloping curve based on  E  ( P )   coordinates or normalized to the corresponding volume- or weight-specific values of the specific storage gained from multiple constant power measurements . In the field of batteries, Ragone plots are widely used for energy storage selection and sizing, particularly including applications like vehicle and truck powertrains, either full-electric  or in a hybrid topology for coupling different battery types  or batteries with supercapacitors  and fuel cells , but also stationary power grid storage systems for buffering fluctuations in renewable energies . However, most of the Ragone plots known to the authors only reflect the battery performance concerning the full operating range specified by the manufacturer's permissible limits. Only few studies have investigated the influence of a restricted operating range on the battery's energy-power characteristics.
+
+[Paragraph 23]
+For instance, a study by Krieger and Arnold  analyzed the effects of "undercharge" and "underdischarge" by adjusting the specific cut-off voltages for distributed set powers in either charge or discharge directions. They adapted the theoretical model of Christen and Karlen , allowing for mathematical calculation of the Ragone envelope for various energy storage devices, and experimentally validated it across the full operating range. The observed loss in available capacity  Δ Q  ( P )   was attributed to a resistance-induced voltage offset causing earlier termination. Additionally, LeBel etal.  presented a battery pack sizing method for electric motorcycle applications, where they manually restricted the battery's available operating range by setting a higher discharge voltage limit   U  cell , min   , corresponding to    SoC   cell , min   = 20  % , to enhance safety and compatibility. However, their performance metrics were derived from data sheet-based discharge curves at constant current (CC), which, according to the experimental findings of Zhang etal. , can deviate by up to  25  %  versus constant power (CP) at the same operating point.
+
+[Paragraph 24]
+Further studies by Sarpal etal.  and Wiegelmann etal.  systematically quantified the impact of multiple operating conditions at different cells, including variations of termination limits like   U  cell , min   ,   I  cell , max   dis   , and   ϑ  cell , max   dis   , on the discharge performance of different batteries through CP measurements. This led to the development of the extended Ragone plot (ERP) in our previous work , allowing for re-evaluation of the battery's Ragone envelope by trimming the full-range dataset with one or multiple combined limits. As the ERP can incorporate both directly measurable and calculable limits, such as    SoC   cell , min   , it has proved well suited for conceptual decision-making in a system design method.
+
+[Paragraph 25]
+Although several battery cells have been investigated under a variation of many operating conditions causing termination of the respective discharge or charge measurements, research on the variation of initialization conditions remains sparse. Only a few investigations have varied the initial temperatures   ϑ  cell , init    by setting different   ϑ  amb    during characterization, such as Catenaro etal. , to derive an enhanced Ragone plot based on CC measurements with three cells for energy storage selection and sizing, or Verbrugge and Ying  to parameterize a theoretical battery model as a function of temperature. Sarpal etal. were the only ones to investigate the influence of restricting the operating range by varying the initial state-of-charge    SoC   cell , init    for part-load applications, where, for example, it is impracticable to recharge the cells completely before every energy request. While their study experimentally characterized the influence of these initialization conditions on the particular charge or discharge performance, it was primarily for illustrative purposes and only superficially analyzed. To date, we are not aware of any comprehensive work that examines the performance characteristics of a battery cell in a restricted operating range where its lower and upper limits are adjusted concurrently.
+
+[Paragraph 26]
+This paper aims to fill this gap by experimentally characterizing the power-based performance of lithium-ion battery cells within a restricted operating range, specifically focusing on a variation of the upper voltage limit first. While the sole adjustment of different termination limits, such as the discharge cut-off voltage, has been investigated in our previous publication, this study concentrates on the variation of the initialization condition by investigating the influence of the end-of-charge voltage on the subsequent discharge performance. An ERP is employed to visualize and harmonize the individual measurement results of this performance characterization. To reduce the experimental effort, we demonstrate a reconstruction method to recalculate the Ragone envelope under variation of the upper voltage limit from the full-range measurement. Using a superposition of the upper and lower voltage limits, performance metrics for the restricted operating range are finally derived using this reconstruction-based approach. Our approach seeks to enable comprehensive battery performance analysis without the need to characterize various operating limit combinations individually, providing a practical and efficient method for engineers and researchers.
+
+[Paragraph 27]
+The article is structured as follows:  presents the specifications of the selected battery cells and the test equipment used for performance characterization. Following the measurement-based approach,  presents the test procedure before the experimental results of characterizing the battery cells' performance under varying upper voltage limits are analyzed and discussed using an ERP.  proposes the reconstruction-based approach to trim the full-range measurement data from the previous section to match the same voltage limits and enable the extraction of the cell's performance characteristics. After clarifying the procedure, the results of this approach are comparatively analyzed with those of the corresponding measurements for validation, and probable causes for deviations are discussed in detail for all battery cells. In , the superposition of simultaneous range restrictions by altered termination and initialization limits calculated from reconstruction is examined in the ERP using the operating voltage as an example. Finally,  summarizes the main results, highlights the limitations of the proposed approach, and provides an outlook for future research.
+
+[Paragraph 28]
+Methods
+
+This section presents the specifications of the battery cells and test equipment examined to carry out the performance characterization.
+
+Battery cells
+
+For this study, three types of lithium-ion battery cells were selected.   lists their relevant datasheet specifications. In order to discuss different influencing factors in the presented analysis, cells with different types, formats, and cell chemistries were chosen. Thus, the physical properties, such as available current, temperature, and especially voltage ranges, are cell-specific.
+
+[Paragraph 29]
+Prismatic cell#1, with the largest size and thus current capacity, is based on lithium titanium oxide (LTO) as negative electrode material. Screening its discharge curves from the datasheet, we suspect the positive electrode is a two-phase solid mixture of lithium nickel manganese cobalt oxide (NMC) and lithium manganese oxide (LMO). Not uncommon due to the stable spinel structure of LTO and its elevated half-cell potential curve , this cell offers the lowest internal resistance, totaling  1   m Ω   but also the lowest permissible cell voltage limits of only  1.5  and  2.7   V  . However, the material's enhanced stability enables symmetrical electrical and thermal operating ranges in the charging and discharging direction with maximum continuous currents of  4.4   C   and a maximum temperature of  55      ∘   C  .
+
+[Paragraph 30]
+Cell#2 is an elongated pouch cell with a geometric aspect ratio of   >  3.3 . From the datasheet, it is specified with a positive electrode of lithium cobalt oxide (LCO) and a carbon-based negative electrode, usually made of graphite (C), which corresponds to the highest overall voltage range up to  4.2   V  , the typical physical limit to protect the LCO material against structural instability . In the discharge direction, very high continuous current rates of  15   C   and a maximum temperature of  60      ∘   C   are permitted, while its charge direction is considerably limited.
+
+[Paragraph 31]
+Cell#3, on the other hand, is a cylindrical nano-lithium iron phosphate (LFP) cell in 26,650 format. With  2.6   Ah  , it offers the smallest nominal charge capacity of the analyzed battery cells, but it is approved for the highest current rates at  20   C   permanently and even  48   C   for pulses. Like the LCO-based pouch cell, the current and temperature ranges of cell#3are more limited in the charge direction, but despite its lower cell capacity, it offers similar discharge characteristics overall. Typical of an LFP-based battery cell are its relatively moderate cell voltage of  3.3   V   and permissible voltage range width of  1.1   V  .
+
+[Paragraph 32]
+Test equipment
+
+A Scienlab SL60/300/18BT2C test system was used to experimentally test the performance of the selected battery cells. It offers a  6   V   voltage range for single-cell cyclization measurements and a bidirectional current range of  ± 300   A  , allowing for high power charge and discharge. Voltage is measured by an analog 4-wire sensor with an accuracy of  ± 0.05  %  of the reading  ± 1   mV  , while the accuracy of the current measurement is  ± 0.05  %  of the reading  ± 60   mA  . In order to establish consistent ambient conditions for each test, the electrical cyclization is conducted under homogeneous temperature   ϑ  amb   = 25      ∘   C   and free convection inside a BINDER type MK 720 temperature chamber. The temperature is measured using a Pt100 4-wire measurement with an accuracy of  ± 1   K   in the interval  - 50      ∘   C   to  130      ∘   C  . The error due to the measurement uncertainties is estimated to be largely negligible in the relevant value range of the battery cell's measurement signals. For verification, a measurement uncertainty analysis was conducted based on the experimental results of each cell, which are presented in the following section (see Supplementary data, Section S.1).
+
+[Paragraph 33]
+Measurement-based approach
+
+This section introduces the measurement-based approach for characterizing battery cell performance. First, the measurement procedure is explained, followed by the analysis and discussion of the measurement results for the selected battery cells.
+
+[Paragraph 34]
+Procedure
+
+To visualize and compare their performance metrics in an extended Ragone plot, we performed characterization measurements on these three battery cell types with reduced charge cut-off voltages. At least two samples of each cell type were tested in parallel to ensure the reproducibility of the measurement results, although the results shown are from one reference cell only.
+
+[Paragraph 35]
+displays the flow chart of the corresponding measurement procedure for ERP derivation. Initially, the desired voltage and power set values,   U  cell , cut   chg    and   P  cell   dis   , are predefined for iterative cyclization (Calculation). While   U  cell , cut   chg    is manually set to   n  U   = 5  voltage levels that systematically cover the anticipated relevant operating range of each cell, as outlined in  ,   P  cell   dis    is calculated from the cell's permissible electrical limits (see ) by dividing the available power interval   [  P  cell , min   dis   ,  P  cell , max   dis   ]   equidistantly into   n  P   = 25  parts, following .  (1)   P  cell , min   dis   =  U  cell , min     ( -  I  cell , cut   chg   )       (2)   P  cell , max   dis   =  U  cell , max     I  cell , max   dis        (3)      P  cell   dis      =  {  P   i  P       |   P   i  P     =  P  cell , min   dis   +     i  P   - 1    n  P   - 1      (  P  cell , max   dis   -  P  cell , min   dis   )    ,                 i  P   - 1    n  P   - 1        i  P   ∈  {    1 ,  2 ,  …  ,  n  P      }  }
+
+[Paragraph 36]
+Subsequently, the ambient conditions of the temperature chamber are standardized to a temperature of   ϑ  amb   = 25      ∘   C   (Climate) before the electrical cyclization of the battery cells is initiated, as represented by the two nested loops for iterating over   i  U    and   i  P    in the bottom section of the flow chart.
+
+[Paragraph 37]
+An electric cycle consists of a nominal charge (Source (chg)), a subsequent discharge step (Source (dis)), and two resting phases in between (Wait). According to the manufacturer's specifications, each cell is charged with nominal constant current (CC)   I  cell , n   chg    to an upper voltage   U  cell , cut   chg   , which is set by iterating   i  U   , followed by a constant voltage (CV) phase at this end-of-charge voltage until the current drops to a specific cut-off current   I  cell , cut   chg   . The discharge steps, in contrast, are performed at varying constant power (CP), taking previously calculated   P  cell   dis    [  i  P   ]   from Eq. () as the set value. After each charge and discharge, a 15-min resting phase lets the polarized cells briefly relax toward their electrical-thermal equilibrium state.
+
+[Paragraph 38]
+In contrast to the standard protocol for experimentally determining a Ragone plot , the novel aspect of this procedure is embedding the corresponding inner loop into an additional outer one for reducing the upper voltage limit in the CV phase. This modification allows cell characterization within a restricted voltage range, depending on variations of   U  cell , max   , by incomplete recharge. Further characterization measurements could also be derived under different operating conditions, such as varying ambient temperature, by simply adjusting the outer loop in the same test procedure.
+
+[Paragraph 39]
+Measurement results
+
+As described in the previous section, the test procedure is applied to characterize the experimental performance of the selected battery cells, explicitly focusing on a variation of their upper voltage limits, defined by the end-of-charge voltages   U  cell , cut   chg   . The measurement results are presented below using cell#1 as an example to illustrate this procedure, with subsequent analyses and comparisons encompassing all tested cells.
+
+[Paragraph 40]
+displays the measurement signals of cell#1: (a) the cell voltage   U  cell   , (b) the electrical discharge current   I  cell   dis   , and (c) the mean temperature   ϑ  cell   dis    as a function of the discharge energy   E  cell   dis    for the charge cut-off voltages   U  cell , cut   chg    [  i  U   ]   in the correspondingly numbered columns   i  U   = 1 , 2 , 3 . The first row of subplots   (  i  U   = 1 )   represents this analysis's "base case" since with   U  cell , cut   chg   =  U  cell , max    the cells are cycled along the full operating range without further restriction. Each set of curves contains the measurement signals of all   n  P    CP discharges. The arrows in (a1)-(c1) indicate the direction of increasing set power   P  cell   dis   . The signals for a reference discharge (corresponding here:   i  P   = 9 ;   P  cell   dis   = 88.51   W  ) are highlighted to enable a line-by-line comparison between the subplots. As explained in our previous work , the electrical signals   U  cell    ( t )   and   I  cell   dis    ( t )   are variable over time due to the CP discharge specification. While the voltage of cell#1 decreases monotonically  1 For low CP discharges, a local voltage plateau is recognized at around  20   Wh   of discharged energy, indicating a multiphase transition in the electrode material. Due to the almost constant half-cell potential of the LTO material of the negative electrode, a potential analysis indicates a hybrid material mixture in the positive electrode, assumably NMC and LMO (see ).  during discharge, as with most battery cell technologies (see (a1)), the discharge current increases by   I  cell   dis   =  P  cell   dis    /   U  cell    (see (b1)).
+
+[Paragraph 41]
+According to thermal fundamentals of Bernardi etal. , the heat generation caused by the discharge process leads to an increase in the cell temperature, which is approximated here using the sensor temperature measured at the cell's surface (see (c1)). As is typical for LTO-based cells, the temperature increase of approximately  Δ  T  cell   dis   = 8.5   K  , even at maximum continuous discharge power, is moderate and significantly below the temperature limit   ϑ  cell , max   dis   , and thus does not represent a termination criterion for this measurement series. However, the situation is different with the electrical operating variables. While the discharges of cell#1 at moderate and medium   P  cell   dis      (  i  P   ≤ 14 )   are terminated by the minimum voltage limit   U  cell , min    (see (a1)), the maximum current limit   I  cell , max   dis    causes termination at high power   (  i  P   > 14 )  , corresponding to an earlier voltage cut-off, i.e., lower discharge energy.
+
+[Paragraph 42]
+The variation of the upper voltage limit for   i  U   = 2  and  3 , as shown in shades of gray in (a2)-(c3), results in comparable curve sets of   U  cell   ,   I  cell   dis   , and   ϑ  cell   dis    as in the base case of cell#1, whereby the   n  P    curves of each   i  U    iteration fan out qualitatively in the same way. Nevertheless, as the charge cut-off voltage   U  cell , cut   chg    is lowered, the discharged energy diminishes due to the restricted voltage and corresponding SoC range.
+
+[Paragraph 43]
+To quantitatively assess the critical performance characteristic  E ( P )  from a user's perspective, the ERP of cell#1in  (a) is determined from its operating voltage and current signals discussed in . Following the explanation outlined in our previous work , a distinct Ragone envelope is computed for each   i  U    iteration by averaging the cell power   P  cell   dis    ( t )   from the product of   U  cell    ( t )   and   I  cell   dis    ( t )   and integrating this power over time to calculate the cell energy   E  cell   dis   . All Ragone curves can be divided into a characteristic upper part, determined by   U  cell , min    termination, and a right flank, determined by   I  cell , max   dis    termination. The change in the respective termination criterion is illustrated as     P  cell   dis     , UI   .
+
+[Paragraph 44]
+For cell#1, a disproportionate relationship between the restriction of the upper voltage limit and the resulting decrease in discharge energy compared to the base case is observed and attributed to the non-linearity of the cell voltage curves (see (a)). Taking the highlighted reference power at   i  P   = 9  as an example, approximately   E  cell   dis    [  i  U   = 1 ]  = 49   Wh   can be discharged from this cell across its full operating range. Reducing the upper charge voltage to   U  cell , cut   chg   = 2.55 ,  2.4 , and  2.25   V  , discharge energies of only   E  cell   dis    [  i  U   = 2 , 3 , 4 ]  = 45.8 ,  36.3 , and  21.2   Wh   would be available to an application, corresponding to a reduction of  - 6.3  % ,  - 25.9  % , and even  - 56.6  % . As plotted in   for cell#1 (blue), these normalized energy deficits  δ  E  cell , unav   dis    indicate a progressively increasing trend as a function of its end-of-charge voltage reduction normalized to the permissible voltage range  δ  U  cell , cut   chg   . Consequently, if the voltage range permitted by the manufacturer would be halved to   U  cell , cut   chg    [  i  U   = 5 ]  = 2.1   V  , cell#1 could not provide a significant amount of discharge energy with this reference power.
+
+[Paragraph 45]
+Concerning the relevant performance characteristics  E ( P )  of the other cells#2 and #3, identical measurements were performed to derive their ERPs in (b) and(c). An analysis of their operating quantities   U  cell   ,   I  cell   dis   , and   ϑ  cell   dis    corresponding to  can be found in the Supplementary data, Section S.2.1. For a detailed comparison of their operating ranges and signal curves, these cells' particular electrode chemistries should be considered (cf. ). Both the LCO and LFP cells exhibit a stronger temperature rise during the CP discharges, which will be discussed in more detail in . However, the maximum temperature limit   ϑ  cell , max   dis    does not trigger termination despite the increased heating at the end of discharge, so the key statements for cell#1are transferable to the other two cell types at this point.
+
+[Paragraph 46]
+Consequently, apart from the different energy and power ranges of cells#2 and #3, the enveloping shape of the particular Ragone curves in (b) and(c) is similar to that of cell#1. In the upper part up to     P  cell   dis     , UI   , the ERPs of both cells are governed by an   U  cell , min    termination, while the right flank of the curves is determined by the maximum discharge current limit   I  cell , max   dis   . Due to the higher total voltage of the LCO and LFP cells and their relatively flatter current curves, the right flank of the envelope is noticeably steeper than that of the LTO cell. Accordingly, the knee points of the Ragone curves are more pronounced here and practically coincide with     P  cell   dis     , UI   .
+
+[Paragraph 47]
+Similar to the ERP of cell#1in (a), the end-of-charge voltage reduction for cell#2in (b) leads to vertically stacked Ragone curves. However, as can be seen in  based on the reference discharges of cell#2 (red, corresponding here:   i  P   = 9 ;   P  cell   dis   = 123.85   W  ), a fairly linear relationship is observed between the normalized voltage limit and the resulting discharge energy deficits relative to the base case.
+
+[Paragraph 48]
+The Ragone curves of cell#3, on the other hand, remain nearly identical down to   U   cell , cut    chg   = 3.4   V   (  i  U   = 3 )   and show hardly any noticeable decrease in discharge energy. A significant drop in the available discharge energy occurs from   i  U   = 4  at   U  cell , cut   chg   = 3.35   V  , as reflected by the sharp increase in the normalized energy deficit of cell#3 (green, corresponding here:   i  P   = 9 ;   P  cell   dis   = 60.0   W  ) in . This inflection point is caused by the characteristic flat voltage plateau of LFP   |   C-cells[cf. ,] (see Supplementary data, Section S.2.1). For the full operating range of this LFP cell, the manufacturer has permitted an excess of almost  20  %  for the maximum voltage limit, presumably for recalibration or balancing within a sufficient time. However, this range contributes practically no energy regardless of the discharge power applied. By varying the end-of-charge voltage  δ  U  cell , cut   chg    within the cell's voltage plateau, a substantial part of the available cell capacity is skipped and thus inaccessible for the application. Due to the corresponding steep gradient of  δ  E  cell , unav   dis    /  δ  U  cell , cut   chg    in , the reduction of   U  cell , cut   chg    should be treated cautiously with cell#3.
+
+[Paragraph 49]
+Briefly summarizing the measurement results of the three battery cells, an analysis of their ERPs reveals considerable energy deficits associated with the charge cut-off voltage reduction. The specific cell chemistry is identified as the dominant influencing factor on their respective performance characteristics. Reducing the upper voltage may benefit system design or operational management, particularly if harmful operating ranges are avoided without substantially impacting performance, especially for battery cells with low gradients of relative energy decrease  δ  E  cell , unav   dis    /  δ  U  cell , cut   chg   . Our analysis shows that this appears suitable for the LFP- and LTO-based cells. However, for the LCO cell, a linear decrease in energy is anticipated by restricting the end-of-charge voltage.
+
+[Paragraph 50]
+Reconstruction-based approach
+
+Due to high experimental effort, characterizing each cell at multiple cut-off voltage levels through individual measurements is costly and time-consuming. We therefore want to examine whether and under which assumptions the required performance characteristics of a battery cell can be estimated based only on the full-range measurements of the base case. Therefore, we propose a reconstruction-based approach, explained below. This approach is applied to the measurement data from the previous section for validation, while probable causes for deviations are discussed in detail for the selected battery cells.
+
+[Paragraph 51]
+Procedure
+
+The fundamental concept of recalculating a battery cell's ERP for a variation of specific operating limits is analogous to our previous publication . Utilizing a dataset collected within the full permissible operating range during CP discharge, the cell's performance characteristics can be adjusted by trimming at various measurable limits, such as   U  cell , min   ,   I  cell , max   dis   , or   ϑ  cell , max   dis   , as well as calculated limits, such as    SoC   cell , min   , each forcing termination. A critical assumption of this trimming procedure is that the temporal dynamics of the base case measurements are independent of the termination condition. This assumption holds for various termination limits, such as   U  cell , cut   dis   =  U  cell , min   .
+
+[Paragraph 52]
+However, modifying limits associated with the begin-of-charge or -discharge can significantly affect the temporal dynamics of the cell's operation. As analyzed in , the initial discharge voltage   U  cell , init   dis    from an electrical perspective and the initial temperature   ϑ  cell , init   dis    from a thermal perspective are the relevant initialization conditions for each discharge. Since this study primarily focuses on the influence of electrical operating range restrictions on cell performance, only the initial discharge voltage shall be considered as the target value for the trimming process.  2 Although the initial discharge temperature is maintained at approximately   ϑ  cell , init   dis   =  ϑ  amb    by the test protocol, there might be a conceivable influence of the current temperature on the cell's operating voltage   U  cell    (  ϑ  cell   )   and correspondingly on the trim. However, especially for cell#1, characterized by a gradual temperature increase and moderate overall heating during discharge even at maximum power, we posit that the initial temperature has little influence on the ERP recalculated by trimming. This assumption will be reassessed in  for all battery cells.
+
+[Paragraph 53]
+To support the analysis of the electrical operating behavior of a battery cell, a so-called polarization plot is schematically presented in  . Taking cell#1 as an example, (a) displays the base case measurement from (a1)-(c1) as a voltage-current characteristic   U  cell   = f  (  I  cell   dis   )   in dark blue. The discharge direction is shown on the right-hand side   (  I  cell   dis   ≥ 0   A  )   and the charge direction on the left-hand side   (  I  cell   dis   < 0   A  )   of the abscissa. As defined by the flow chart in , the measurement data is restricted to the permissible current limits,   [  I  cell , cut   chg   ,  I  cell , max   chg   ]   in the charge direction and   [ 0 ,  I  cell , max   dis   ]   in the discharge direction, as well as voltage limits   [  U  cell , min   ,  U  cell , max   ]  , according to the manufacturer's data sheet (black dashed lines).
+
+[Paragraph 54]
+The repeated nominal charges of cell#1 each consist of a CC phase with   I  cell , n   chg   = - 23   A   ( 1   C  )   corresponding to the vertical part of the curve up to   U  cell , max    in this polarization plot, followed by a horizontal part expressing the cell current reduction to the cut-off current   I  cell , cut   chg    during the CV phase. At this point, the static SoC is defined as    SoC   cell   = 100  %  (marked as a gray dot) based on   Q  cell , n   , formally representing the "fully charged" cell [cf. ]. In the discharge direction, the battery cell is operated with varying CP regimes, displayed as hyperbolas of   U  cell   =  P  cell   dis    /   I  cell   dis   . With increasing set power, these curves are staggered along the abscissa, limited by   U  cell , min    at low to moderate power levels and   I  cell , max   dis    at higher power levels. The reference measurement   i  P   = 9  is again highlighted for line-by-line comparison.
+
+[Paragraph 55]
+Starting from the fully charged state, the distinct SoC isolines are computed for cell#1in  10  %  increments, drawn as thin gray lines with corresponding labels in the polarization plot. Over a wide SoC range of approx.  10  %  -  80  % , these isolines run parallel with a slightly negative slope and almost equal distance depending on   I  cell   dis   . Towards the absolute operating limits, especially    SoC   cell   = 0  %  (discharge) and    SoC   cell   = 100  %  (charge), the SoC isolines steepen due to the typically tub-shaped internal resistance curve, which is characteristic of battery cells. Interestingly, the three CP discharges at the lowest power   (  i  P   = 1 , 2 , 3 )   end at    SoC   cell   < 0  % , clarified by the static SoC definition, which refers to the nominal capacity   Q  cell , n    specified by the manufacturer under nominal conditions (here:   I  cell , n   dis   = 1   C  ,   ϑ  cell , n   = 23      ∘   C  ). Because of the low power specification of these CP regimes, higher charge capacity than   Q  cell , n    was actually drawn from the cell in these cases. Contrary to what might be assumed by the corresponding   U  cell   = f  (  E  cell   dis   )   representation in (a1), the measured CP discharge curves after recharging under nominal conditions do not start at the previous end-of-charge voltage   U  cell , max   , specified by the test protocol. Instead, they start at slightly lower initial discharge voltages, which refer to the electrical polarization effect. This polarization results in a characteristic drop between the charge and discharge direction at   I  cell   dis   = 0   A   and a degressively increasing trend as a function of the cell current applied at    SoC   cell   = 100  % .
+
+[Paragraph 56]
+In the adjacent polarization plot of (b), the measurement results of cell#1are displayed in light blue under the restriction of the upper voltage limit for   i  U   = 2 . In contrast to the full-range measurement, the CCCV charge process is limited to the upper voltage   U  cell , cut   chg    instead of   U  cell , max   . Due to the identical CP specification, the measured discharge curves during cyclization follow the same hyperbolas as the base case in (a). Similarly, the initial discharge voltages   U  cell , init   dis   , which refer to the same cut-off SoC, are slightly lower because of the electrical polarization effect but exhibit a marginally different, almost linear decline as a function of the cell current along the red    SoC   cell , cut    isoline.
+
+[Paragraph 57]
+If these performance characteristics were approximated from the base case dataset rather than running individual measurements as with the termination limits, a simple voltage-based trimming to the exact limit   U  cell , cut   chg    would be insufficient as it neglects the effect of electrical polarization under load. Instead, reconstructing the cell's characteristic polarization behavior along the respective    SoC   cell , cut    isoline is crucial to achieving   U  cell , init   dis    precisely, giving this approach its name. However, since the static SoC definition only refers to a single fixed point within the operating range of the cell, i.e., the fully charged state, the required cut-off SoC at the end-of-charge is typically unknown and must be estimated from the previous charging process as    SoC   cell , cut   = f  (  U  cell , cut   chg   ,  I  cell , cut   chg   )  . Given that the cut-off current remains invariant during the test and is generally low at   I  cell , cut   chg   ≤    1   /   15      C   for various battery cells (see ), it can be determined explicitly.
+
+[Paragraph 58]
+As displayed in  , we performed an additional CC measurement at   I  cell   = ±   I  cell , cut   chg    to replace the functional relationship to    SoC   cell , cut   = f  (  U  cell , cut   chg   )  . This galvanostatic measurement approximates the "real" voltage equilibrium (formally expressed as open circuit voltage (OCV)) and is therefore referred to as pseudo-OCV  3 The designation "pseudo" is used because it does not precisely define the cell voltage in equilibrium at open terminals but approximates it under assumably negligible polarization[cf. ]. Such pOCV measurements are outstandingly important in state diagnosis and forecasting, especially in examining degradation modes. For further information, we refer to the work of Dubarry etal.  and Birkl etal. .  (pOCV) determination, illustrated for cell#1in charge (   pOCV   chg   , blue) and discharge direction (   pOCV   dis   , red). Neglecting the potentially contained hysteresis effects involved, the equilibrium voltage of a battery cell is occasionally estimated by averaging the curves of    pOCV   chg    and    pOCV   dis   [cf. ], denoted here as    pOCV   avg    (dotted black). Although only    pOCV   chg    is required for the reconstruction-based approach to correctly trim the discharge polarization behavior, the other two pOCV curves are used in the subsequent discussion of  to examine causes for deviations of this approach. Corresponding pOCV measurements for cells#2 and#3are available in the Supplementary data, Section S.2.2.
+
+[Paragraph 59]
+Ultimately, the reconstruction procedure for characterizing cell performance with a reduction of the upper voltage limit can be summarized as follows: Starting with the full-range data used to generate a Ragone plot, the cut-off conditions from the preceding charge process must be matched to determine the initialization condition of the subsequent discharge accurately. Since the nominal CCCV charge terminates at   I  cell , cut   chg   , the characteristic    pOCV   chg    curve recorded with this current is assumed to represent the cut-off conditions for subsequent discharges. It allows matching the cut-off state    SoC   cell , cut    for any given upper voltage   U  cell , cut   chg   , which is why we will refer to it as "SoC matching" in the following. Finally, to account for the polarization-dependent initial discharge voltages, the upper limit of the desired voltage range is reconstructed as   U  cell , init   dis   = f (   SoC   cell , cut   ) , and the base case data is trimmed accordingly along this cut-off SoC for each CP discharge.
+
+[Paragraph 60]
+Validation
+
+In order to test and validate the reconstruction-based approach, the ERPs of the three selected cells were evaluated at the corresponding cut-off voltages of the conducted measurements.  (a1)-(c1) presents all cells' measured and reconstructed ERPs with varying   i  U   . According to the coloring in , the pure measurement results are shown in shades of gray, while the reconstructions are colored (see figure caption for details). Starting from the black envelope of each base case (cell#1:  2.7   V  , cell#2:  4.2   V  , cell#3:  3.6   V  ), the measured and reconstructed Ragone curves are in good qualitative agreement for the same cut-off voltage. However, the associated ERP curves deviate slightly the more the specific cut-off voltage   U  cell , cut   chg    is reduced   (  i  U   > 1 )  , with these deviations being most prominent at moderate and high discharge power.
+
+[Paragraph 61]
+For quantification, the relative deviations of the available cell energy  δ  E  cell   dis    are evaluated as a function of the discharge power   P  cell   dis    and visualized in (a2)-(c2) using the same color coding. Across all cells, the deviations remain within  δ  E  cell   dis   ≤ 3  %  for small reductions in the upper limit voltage   (  i  U   ≤ 3 )   over almost the entire power range   ( ∀   i  P   )  . In the upper part of the ERPs, for   P  cell   dis   <  P  cell , UI   dis   , where termination is determined by reaching   U  cell , min   , these deviations exhibit an increasing dependence on the discharge power,  δ  E  cell   dis   = f  (  P  cell   dis   )  , especially for cells#2 and#3. In contrast,  δ  E  cell   dis    rises sharply in the right flank of the Ragone curves, limited by   I  cell , max   dis    at   P  cell   dis   >  P  cell , UI   dis   . This increase is driven both by more significant absolute differences between the corresponding two curves and their normalization to the measured energy values, which also decline sharply. Since the associated E/P ratios of all battery cells are below  5   min   at such very high power levels, we assume that these deviations likely have little practical relevance.
+
+[Paragraph 62]
+While the reconstructed Ragone curves appear as a parallel shift of the base case envelope along the ordinate, due to the almost parallel SoC lines in the polarization plot (see ), the measured Ragone curves exhibit noticeable flattening at higher   i  U    and   i  P    values, as seen in (b1) for  3.8   V   and  3.9   V   or in particular (c1) for  3.3   V  . As the cut-off voltage is further reduced   (  i  U   > 3 )  , the relative energy deviations across all cells increase beyond  ± 3  % , with the reconstructed available energy generally overestimating the measured values - a discrepancy to be discussed in the following section.
+
+[Paragraph 63]
+Although such a substantial restriction of the upper voltage is primarily theoretical and would lack practical relevance in use (as the three battery cells would lose a significant portion of their available energy of  δ  E  cell , unav   dis   > 40  % , see ), it is crucial to assess the generalizability of this approach. To that end, the following section investigates whether the observed deviations are systematic and reproducible, identifying potential causes within the reconstruction method.
+
+[Paragraph 64]
+Causes for deviations
+
+As shown in the previous section, comparing the ERPs obtained from the measurement- and reconstruction-based approaches revealed deviations across the three battery cells. This section provides a detailed analysis of the possible causes of these deviations using the reference discharges at   i  P   = 9  highlighted in . For this purpose, all cells' measured and reconstructed voltage signals   U  cell    are plotted in  (a1)-(c1), while their corresponding temperature signals   ϑ  cell   dis    are shown in (a2)-(c2). As in previous figures, the pure measurement results are displayed in shades of gray, and the reconstructed curves are colored (see figure caption for details). To capture the reconstruction procedure more methodically, both operating variables are plotted above    SoC   cell   , unlike previous plots, which were presented against the cell energy   E  cell   dis   . Additionally, (a1)-(c1) contains the   pOCV   curves of each cell, according to the methodological procedure from . The trimming points of the four measurements with   i  U   > 1  are indicated by red, non-continuous lines based on these specific    pOCV   chg    curves. The secondary axis on top evaluates the cut-off SoCs associated with the specific end-of-charge voltages   U  cell , cut   chg   .
+
+[Paragraph 65]
+For cell#1in (a1), the SoC matching works sufficiently well: The voltage signals of measurement and reconstruction are nearly congruent for   i  U   ≤ 4  ( 2.7 -- 2.25   V  )   under moderate polarization. Only the measurement at   i  U   = 5  ( 2.1   V  )   shows a significantly steeper voltage drop due to stronger polarization behavior, resulting in an earlier discharge cut-off at   U  cell , cut   dis   =  U  cell , min   . As a result, it hardly provides any energy or charge at this set power (cf. ). This effect is likewise but more distinctly observed with cells#2 and#3in (a2)-(a3), where higher internal resistances   R  i , cell , n    lead to more pronounced polarization overvoltages, reflected as a broader vertical gap between the cell voltage   U  cell    and the    pOCV   dis    curve. As   U  cell , cut   chg    is progressively reduced as a function of   i  U   , the actual cell voltage   U  cell    (   SoC   cell   )   decreases accordingly, which is evident in the plateau regions of cell#2 at   i  U   = 4  ( 3.90   V  )   and   i  U   = 5  ( 3.80   V  )   and cell#3 at   i  U   = 5  ( 3.30   V  )  .
+
+[Paragraph 66]
+Since this effect only occurs at low   U  cell , cut   chg   , it can be plausibilized by analyzing the temperature signals in (a2)-(c2) for   i  P   = 9 . According to the measurement procedure outlined in , all CP discharges start at an approximately equal initial temperature   ϑ  cell , init   dis   =  ϑ  amb   . In contrast, during reconstruction, the initial cell temperature is determined by the temperature   ϑ  cell   dis   = f  (   SoC   cell , cut   )   at the trimming point from the base case measurement   (  i  U   = 1 )  , incorporating the already accumulated thermal energy. According to previous research , the temperature dependence of a lithium-ion battery cell's internal resistance   R  i , cell   = f  (  ϑ  cell   )   generally follows an Arrhenius law[cf. ]. A higher cell temperature thus lowers the internal resistance, thereby reducing polarization and increasing the voltage   U  cell    in the direction of discharge. Under the same operating range restriction, a colder cell reaches the termination at   U  cell , min    earlier during the measurement, providing slightly less energy compared to the corresponding reconstruction of the warmer base case. This temperature effect becomes more influential when (i) the set power causes notable heating of the battery cell and (ii)   U  cell , cut   chg    is significantly reduced, i.e., the trim occurs later in the base case. Based on the reference discharge at   i  P   = 9 , this temperature effect can be observed particularly well for cell#2in (b).
+
+[Paragraph 67]
+Apart from this, additional discharges at notably lower and higher power values are evaluated in the Supplementary data, Section S.3.1. As expected from the ERPs in (a1)-(c1), the temperature effect on the energy deviations  δ  E  cell   dis    between measurement and reconstruction becomes evident at very high continuous power for all cells (see ). In contrast to cell#1, cells#2 and#3 heat up significantly, affecting their cell voltages and extractable discharge energies, as discussed earlier. Even for cell#1, which experiences only moderate temperature rise, the measurement results provide less energy than predicted by the reconstruction.
+
+[Paragraph 68]
+At low discharge power, the temperature increase is minimal across all cells, suggesting that the temperature effect on ERP deviations can be regarded as negligible. However, deviations between measurement and reconstruction occur, especially for cell#3 (see ). Given the approximately equal initial temperature conditions, these deviations cannot be attributed to the temperature effect but rather to uncertainties in the SoC matching. An additional investigation is included in the Supplementary data, Section S.3.2, analyzing the effect of intentionally varying the   pOCV   references for SoC matching within the reconstruction-based approach.
+
+[Paragraph 69]
+This analysis emphasizes that only the    pOCV   chg    curve provides an accurate reference for calculating the initialization conditions of a subsequent discharge process by reconstruction. SoC matching based on the    pOCV   avg    curve, e.g., from datasheets, or any reference curve measured at low current in the discharge direction, such as    pOCV   dis   , would inevitably overestimate the available cell energy at the same set power due to their slightly lower reference voltages compared to the    pOCV   chg    curve and should consequently be avoided. In general, the accuracy of SoC matching is highly sensitive to the underlying cell voltage data, especially for battery cells with a flat voltage plateau and pronounced electrical polarization behavior, e.g., due to high internal resistance (see ) or voltage hysteresis, as observed with cell#3. Reliable trimming is thus only recommended in marginal parts of the operating voltage curve where the cell contains a low incremental capacity (IC) defined as   d   Q  cell    /   d   U  cell   , i.e., where the cell voltage shows a steep gradient (see ).
+
+[Paragraph 70]
+Taking these influencing factors into account, the reconstruction-based approach can reliably trim the battery cell's full-range dataset for a desired initialization limit, such as a reduced begin-of-discharge voltage   U  cell , init   dis    in the cases of voltage range restriction by   U  cell , cut   chg   , and approximate the battery cell's energy-power characteristics with sufficient accuracy and effort, while accounting for the effects of electrical polarization.
+
+[Paragraph 71]
+ERP utilization with a restricted operating range
+
+After validating the reconstruction-based approach for discharge initialization, reflected by the upper voltage limit reduction, extend its application by combining it with an additional variation in the battery cell's discharge termination limits to describe its performance characteristics within a restricted operation range. Since the adjustment of these termination limits, such as the lower voltage limit   U  cell , min    or the upper current limit   I  cell , max   dis   , results in earlier termination of the respective CP regimes, performance characteristics can be trimmed directly from the dataset without reconstruction, as previously presented in . The Ragone envelope is then defined by the dominant termination limit at each set power and thus represents the maximum energy loss  Δ  E  cell , unav   dis    in relation to the base case. For this discussion, however, the focus will be exclusively on the voltage operating range here.
+
+[Paragraph 72]
+Using cell#1,  (a) illustrates the cell voltages   U  cell   = f  (  E  cell   dis   )   of the base case measurement from (a1), with the full range plotted in light gray and the restricted range in black. As an example, the minimum voltage limit   U  cell , min    (green) is increased from the manufacturer's limit of  1.5 - 2.0   V  , trimming the set of discharge curves horizontally. Additionally, the maximum voltage limit   U  cell , max    (red) is reduced from the manufacturer's limit of  2.7 - 2.5   V   using the reconstruction-based approach from . Considering the effect of electrical polarization, this reduced initialization limit trims the discharge curves along an isoline of the corresponding    SoC   cell , cut    rather than horizontally. As shown in the polarization plot of , the initial discharge voltage   U  cell , init   dis    decreases as the set power increases, resulting in a voltage difference of   >  100   mV   at the highest power.
+
+[Paragraph 73]
+(b) displays the associated ERP of cell#1 under the imposed operating range restrictions defined by   U  cell , min    and   U  cell , max   . The Ragone curve of its base case measurement from (a) is shown in light gray with consistent color coding. A separate increase in   U  cell , min    results in the green Ragone envelope, where the energy-power characteristics of the battery cell are more limited in the upper part of this envelope up to the knee point, while the right flank remains limited by   I  cell , max   dis   , as in the base case. The vertical gap between the two Ragone curves describes the energy deficit due to earlier termination, referred to as  Δ  E  cell , cut   dis   .
+
+[Paragraph 74]
+Conversely, reducting   U  cell , max    using the reconstruction-based approach via    SoC   cell , cut    yields the red Ragone envelope. Owing to the quasi-equidistant SoC isolines in the polarization plot, the shape of this Ragone curve closely resembles a vertical shift of the full-range envelope. The energy not available due to the later initialization is denoted as  Δ  E  cell , init   dis   .
+
+[Paragraph 75]
+By superimposing the individual Ragone curves for the upper and lower limits, these non-available energy portions  Δ  E  cell , cut   dis    are summed across the ERP at each set power. This graphical superposition is illustrated in (b) using the reference power   i  P   = 9 . The resulting Ragone envelope in black represents the battery cell's performance characteristics within a restricted voltage range based on these exemplary limits. Subject to the limitations and recommendations outlined in , this ERP superposition can be applied to any combination of upper and lower limits, provided that a full-range dataset with sufficient resolution and accuracy is available for the given cell, allowing for both initialization and termination limits to be adjusted accordingly.
+
+[Paragraph 76]
+Conclusion
+
+Summary
+
+In this study, we have experimentally characterized the power-based performance of three commercial lithium-ion battery cells within a restricted operating range, primarily focusing on reducing the upper voltage limit. Five different cut-off voltages were applied to each battery cell to evaluate their influence on the subsequent discharge performance in terms of energy and power. The results revealed energy reductions that varied with cell type, with the specific cell chemistry playing a dominant role. Restricting the upper cell voltage can benefit system design or operational management by avoiding harmful voltage ranges without significantly compromising performance, especially for battery cells with a pronounced initial voltage drop. Based on our analysis, this applies to LTO- and LFP-based cells#1 and#3, while a linear decrease in energy must be considered when using the LCO-based cell#2in practical applications where its end-of-charge voltage is reduced.
+
+[Paragraph 77]
+For evaluating these altered performance characteristics, the extended Ragone plot has proven to be an efficient concept. We introduced a reconstruction-based approach to enable recalculation of the desired discharge performance characteristics from a single base case dataset across the entire operating range. This approach matches the cut-off SoC from the preceding charge process, referenced by a pseudo-OCV measurement, to trim the dataset to a reduced begin-of-discharge voltage, allowing for the reconstruction of the polarization-adjusted initialization conditions. Although the reconstruction is effective, it is sensitive to potential uncertainties in the SoC matching procedure, especially for battery cells with a flat voltage plateau, such as cell#3, and pronounced electrical polarization behavior, which correspondingly accounts for severe temperature rise during operation, such as cell#2. Systematic deviations based on this temperature effect and an accurate selection of the pseudo-OCV were investigated and identified as methodological limitations for this approach. As a result, reliable utilization is recommended only for moderate reductions in the upper voltage limit, especially in parts of the operating voltage curve where the cell voltage exhibits a steep gradient, and both causes for deviations are largely negligible. This underlines the importance of considering the electrical polarization effect, which distinguishes the battery cell's voltage-based operating range specification from often synonymously used descriptors such as SoC, SoE, or DoD.
+
+[Paragraph 78]
+Finally, we examined the superposition of upper and lower operating limits in the ERP using the reconstruction-based approach to extend its applicability to broader operating range restrictions under the limiting aspects of the previous validation. Considering these limitations, this approach enables comprehensive battery performance analysis without costly, additional cell characterization measurements at various combinations of upper and lower operating limits. Based on a global full-range CP-based dataset and a suitable pseudo-OCV reference, the reconstruction method provides a practical solution for battery selection and design with sufficient accuracy and minimal effort, accounting for the effects of electrical polarization.
+
+[Paragraph 79]
+Further aspects of research and development
+
+In order to harness these findings, continuous work will focus on integrating the reconstruction-based approach for handling initialization limits as an additional feature in our system design method. This enhancement would enable the ERP to support the development of adaptive operational management strategies, such as derating or multi-use storage applications. One potential application is the integration of a data-reduced ERP model into a battery management system, to evaluate its feasibility for rapid monitoring and real-time control of the battery's performance by dynamically assessing its power and energy capabilities in variable operating ranges. Furthermore, extending performance characterizations to the charge direction would be beneficial, especially for fast charge strategies. In cases of restricted range cyclization, prioritizing the limiting direction, either charge or discharge, becomes crucial. Consequently, future work should explore mapping a combination of both within the ERP and taking additional thermal and degradation aspects into account.
+
+[Paragraph 80]
+However, it is important to acknowledge the inherent uncertainties in the reconstruction method, which depend on the quality of the underlying data and cell chemistry. As demonstrated across all three cells, the available cell energy was systematically overestimated by up to  3  %  compared to the measurements, e.g., due to the temperature effect that was analyzed in detail but could not be accounted for the reconstruction yet. Given these intrinsic uncertainties in the practically relevant range, we recommend incorporating a generalized safety margin of at least  5  %  of the respective cell energy when applying the reconstruction-based approach to adjust the upper voltage limit of any battery cell. To further improve accuracy, a refinement of the test setup incorporating more precise thermal analysis is advised. Specifically, investigating the battery cell's performance characteristics at (i) different initial temperatures and (ii) cooling conditions using an ERP would be valuable, as both aspects are crucial for assessing real-world operational behavior of the battery.
+
+[Paragraph 81]
+CRediT authorship contribution statement
+
+ Sven Wiegelmann: Writing - review & editing, writing - original draft, visualization, validation, software, resources, methodology, investigation, formal analysis, data curation, and conceptualization. Astrid Bensmann: Writing - review & editing, supervision, project administration, funding acquisition, and conceptualization. Richard Hanke-Rauschenbach: Writing - review & editing, supervision, resources, and conceptualization.
+
+[Paragraph 82]
+Declaration of competing interest
+
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+Supplementary data
+
+Supplementary data to this article can be found online at doi:10.1016/j.apenergy.2025.125704.
+
+Supplementary material
+
+   Multimedia component 1
+
+
+TABLES:
+----------------------------------------
+[Table 10]
+<ce:table colsep="0" frame="topbot" id="tbl0005" rowsep="0" xmlns="http://www.elsevier.com/xml/common/cals/dtd">
+<ce:label>Table 1</ce:label>
+<ce:caption id="c0050">
+<ce:simple-para id="p0005" view="all">Data sheet specifications of the analyzed battery cells <ce:cross-refs id="crs0030" refid="bib0230 bib0235 bib0240">[46–48]</ce:cross-refs>.</ce:simple-para>
+</ce:caption>
+<ce:alt-text id="alt0050" role="short">Table 1</ce:alt-text>
+<tgroup cols="4">
+<colspec align="left" colname="col1" colnum="1"></colspec>
+<colspec align="left" colname="col2" colnum="2"></colspec>
+<colspec align="left" colname="col3" colnum="3"></colspec>
+<colspec align="left" colname="col4" colnum="4"></colspec>
+<tbody>
+<row>
+<entry align="left" colname="col1" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">Cell label</entry>
+<entry align="left" colname="col2" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">#1</entry>
+<entry align="left" colname="col3" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">#2</entry>
+<entry align="left" colname="col4" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">#3</entry>
+</row>
+<row>
+<entry align="left" colname="col1" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">Manufacturer</entry>
+<entry align="left" colname="col2" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">Toshiba</entry>
+<entry align="left" colname="col3" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">Shenzen Melasta Battery</entry>
+<entry align="left" colname="col4" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">LithiumWerks (A123)</entry>
+</row>
+<row>
+<entry align="left" colname="col1" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">Name</entry>
+<entry align="left" colname="col2" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">SCiB™ <mml:math altimg="si46.svg">
+<mml:mn>23</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi>Ah</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col3" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">SLPB8644143</entry>
+<entry align="left" colname="col4" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">ANR26650m1B</entry>
+</row>
+<row>
+<entry align="left" colname="col1" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">Type</entry>
+<entry align="left" colname="col2" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">Prismatic</entry>
+<entry align="left" colname="col3" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">Pouch</entry>
+<entry align="left" colname="col4" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">Cylindrical</entry>
+</row>
+<row>
+<entry align="left" colname="col1" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">Dimension</entry>
+<entry align="left" colname="col2" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">H106 <mml:math altimg="si47.svg">
+<mml:mo>×</mml:mo>
+</mml:math> W115 <mml:math altimg="si47.svg">
+<mml:mo>×</mml:mo>
+</mml:math> T22<mml:math altimg="si49.svg">
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi>mm</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col3" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">H144 <mml:math altimg="si47.svg">
+<mml:mo>×</mml:mo>
+</mml:math> W43.5 <mml:math altimg="si47.svg">
+<mml:mo>×</mml:mo>
+</mml:math> T8.3<mml:math altimg="si49.svg">
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi>mm</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col4" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">26,650</entry>
+</row>
+<row rowsep="1">
+<entry align="left" colname="col1" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">Material</entry>
+<entry align="left" colname="col2" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">NMC+LMO<mml:math altimg="si53.svg">
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mo stretchy="false">|</mml:mo>
+</mml:mrow>
+<mml:mspace></mml:mspace>
+</mml:math>LTO</entry>
+<entry align="left" colname="col3" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">LCO<mml:math altimg="si53.svg">
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mo stretchy="false">|</mml:mo>
+</mml:mrow>
+<mml:mspace></mml:mspace>
+</mml:math>C</entry>
+<entry align="left" colname="col4" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">LFP<mml:math altimg="si53.svg">
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mo stretchy="false">|</mml:mo>
+</mml:mrow>
+<mml:mspace></mml:mspace>
+</mml:math>C</entry>
+</row>
+<row>
+<entry align="left" colname="col1" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si56.svg">
+<mml:msub>
+<mml:mi>Q</mml:mi>
+<mml:mrow>
+<mml:mi>cell</mml:mi>
+<mml:mo>,</mml:mo>
+<mml:mi mathvariant="normal">n</mml:mi>
+</mml:mrow>
+</mml:msub>
+</mml:math>
+</entry>
+<entry align="left" colname="col2" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si46.svg">
+<mml:mn>23</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi>Ah</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col3" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si58.svg">
+<mml:mn>6.3</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi>Ah</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col4" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si59.svg">
+<mml:mn>2.6</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi>Ah</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+</row>
+<row rowsep="1">
+<entry align="left" colname="col1" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si60.svg">
+<mml:msub>
+<mml:mi>R</mml:mi>
+<mml:mrow>
+<mml:mi mathvariant="normal">i</mml:mi>
+<mml:mo>,</mml:mo>
+<mml:mi>cell</mml:mi>
+<mml:mo>,</mml:mo>
+<mml:mi mathvariant="normal">n</mml:mi>
+</mml:mrow>
+</mml:msub>
+</mml:math>
+</entry>
+<entry align="left" colname="col2" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si61.svg">
+<mml:mn>1.0</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">m</mml:mi>
+<mml:mi mathvariant="normal">Ω</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col3" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si62.svg">
+<mml:mn>2.0</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">m</mml:mi>
+<mml:mi mathvariant="normal">Ω</mml:mi>
+</mml:mrow>
+</mml:math> @ <mml:math altimg="si63.svg">
+<mml:mn>1</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi>kHz</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col4" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si64.svg">
+<mml:mn>6.0</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">m</mml:mi>
+<mml:mi mathvariant="normal">Ω</mml:mi>
+</mml:mrow>
+</mml:math> @ <mml:math altimg="si63.svg">
+<mml:mn>1</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi>kHz</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+</row>
+<row>
+<entry align="left" colname="col1" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si66.svg">
+<mml:msub>
+<mml:mi>U</mml:mi>
+<mml:mrow>
+<mml:mi>cell</mml:mi>
+<mml:mo>,</mml:mo>
+<mml:mi mathvariant="normal">n</mml:mi>
+</mml:mrow>
+</mml:msub>
+</mml:math>
+</entry>
+<entry align="left" colname="col2" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si67.svg">
+<mml:mn>2.3</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">V</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col3" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si68.svg">
+<mml:mn>3.7</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">V</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col4" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si69.svg">
+<mml:mn>3.3</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">V</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+</row>
+<row rowsep="1">
+<entry align="left" colname="col1" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si70.svg">
+<mml:msub>
+<mml:mi>U</mml:mi>
+<mml:mrow>
+<mml:mi>cell</mml:mi>
+<mml:mo>,</mml:mo>
+<mml:mi>min</mml:mi>
+</mml:mrow>
+</mml:msub>
+<mml:mrow>
+<mml:mo linebreak="goodbreak">/</mml:mo>
+</mml:mrow>
+<mml:msub>
+<mml:mi>U</mml:mi>
+<mml:mrow>
+<mml:mi>cell</mml:mi>
+<mml:mo>,</mml:mo>
+<mml:mi>max</mml:mi>
+</mml:mrow>
+</mml:msub>
+</mml:math>
+</entry>
+<entry align="left" colname="col2" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si71.svg">
+<mml:mn>1.5</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">V</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo linebreak="goodbreak">/</mml:mo>
+</mml:mrow>
+<mml:mn>2.7</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">V</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col3" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si72.svg">
+<mml:mn>3.0</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">V</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo linebreak="goodbreak">/</mml:mo>
+</mml:mrow>
+<mml:mn>4.2</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">V</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col4" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si73.svg">
+<mml:mn>2.5</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">V</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo linebreak="goodbreak">/</mml:mo>
+</mml:mrow>
+<mml:mn>3.6</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">V</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+</row>
+<row>
+<entry align="left" colname="col1" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si74.svg">
+<mml:msubsup>
+<mml:mi>I</mml:mi>
+<mml:mrow>
+<mml:mi>cell</mml:mi>
+<mml:mo>,</mml:mo>
+<mml:mi mathvariant="normal">n</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mi>dis</mml:mi>
+</mml:mrow>
+</mml:msubsup>
+</mml:math>
+</entry>
+<entry align="left" colname="col2" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si75.svg">
+<mml:mo>−</mml:mo>
+<mml:mn>23</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">A</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo>(</mml:mo>
+<mml:mn>1</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+<mml:mo>)</mml:mo>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col3" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si76.svg">
+<mml:mo>−</mml:mo>
+<mml:mn>3.05</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">A</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo>(</mml:mo>
+<mml:mn>0.5</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+<mml:mo>)</mml:mo>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col4" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si77.svg">
+<mml:mo>−</mml:mo>
+<mml:mn>10</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">A</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo>(</mml:mo>
+<mml:mrow>
+<mml:mo linebreak="badbreak">≈</mml:mo>
+</mml:mrow>
+<mml:mn>3.8</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+<mml:mo>)</mml:mo>
+</mml:mrow>
+</mml:math>
+</entry>
+</row>
+<row>
+<entry align="left" colname="col1" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si78.svg">
+<mml:msubsup>
+<mml:mi>I</mml:mi>
+<mml:mrow>
+<mml:mi>cell</mml:mi>
+<mml:mo>,</mml:mo>
+<mml:mi>max</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mi>dis</mml:mi>
+</mml:mrow>
+</mml:msubsup>
+</mml:math>
+</entry>
+<entry align="left" colname="col2" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si79.svg">
+<mml:mo>−</mml:mo>
+<mml:mn>100</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">A</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo>(</mml:mo>
+<mml:mrow>
+<mml:mo linebreak="badbreak">≈</mml:mo>
+</mml:mrow>
+<mml:mn>4.4</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+<mml:mo>)</mml:mo>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col3" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si80.svg">
+<mml:mo>−</mml:mo>
+<mml:mn>91.5</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">A</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo>(</mml:mo>
+<mml:mn>15</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+<mml:mo>)</mml:mo>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col4" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si81.svg">
+<mml:mo>−</mml:mo>
+<mml:mn>52</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">A</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo>(</mml:mo>
+<mml:mrow>
+<mml:mo linebreak="badbreak">≈</mml:mo>
+</mml:mrow>
+<mml:mn>20</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+<mml:mo>)</mml:mo>
+</mml:mrow>
+</mml:math>
+</entry>
+</row>
+<row>
+<entry align="left" colname="col1" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si82.svg">
+<mml:msubsup>
+<mml:mi>I</mml:mi>
+<mml:mrow>
+<mml:mi>cell</mml:mi>
+<mml:mo>,</mml:mo>
+<mml:mi>pulse</mml:mi>
+<mml:mo>,</mml:mo>
+<mml:mi>max</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mi>dis</mml:mi>
+</mml:mrow>
+</mml:msubsup>
+</mml:math>
+</entry>
+<entry align="left" colname="col2" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si83.svg">
+<mml:mo>−</mml:mo>
+<mml:mn>200</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">A</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo>(</mml:mo>
+<mml:mrow>
+<mml:mo linebreak="badbreak">≈</mml:mo>
+</mml:mrow>
+<mml:mn>8.7</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+<mml:mspace></mml:mspace>
+<mml:mtext>max.</mml:mtext>
+<mml:mspace></mml:mspace>
+<mml:mn>10</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">s</mml:mi>
+</mml:mrow>
+<mml:mo>)</mml:mo>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col3" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si84.svg">
+<mml:mo>−</mml:mo>
+<mml:mn>137</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">A</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo>(</mml:mo>
+<mml:mrow>
+<mml:mo linebreak="badbreak">≈</mml:mo>
+</mml:mrow>
+<mml:mn>22.5</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">C</mml:mi>
+<mml:mo>,</mml:mo>
+<mml:mspace></mml:mspace>
+<mml:mi>max</mml:mi>
+<mml:mo>.</mml:mo>
+</mml:mrow>
+<mml:mspace></mml:mspace>
+<mml:mn>3</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">s</mml:mi>
+</mml:mrow>
+<mml:mo>)</mml:mo>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col4" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si85.svg">
+<mml:mo>−</mml:mo>
+<mml:mn>120</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">A</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo>(</mml:mo>
+<mml:mn>48</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">C</mml:mi>
+<mml:mo>,</mml:mo>
+<mml:mspace></mml:mspace>
+<mml:mi>max</mml:mi>
+<mml:mo>.</mml:mo>
+</mml:mrow>
+<mml:mspace></mml:mspace>
+<mml:mn>10</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">s</mml:mi>
+</mml:mrow>
+<mml:mo>)</mml:mo>
+</mml:mrow>
+</mml:math>
+</entry>
+</row>
+<row>
+<entry align="left" colname="col1" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si86.svg">
+<mml:msubsup>
+<mml:mi>I</mml:mi>
+<mml:mrow>
+<mml:mi>cell</mml:mi>
+<mml:mo>,</mml:mo>
+<mml:mi mathvariant="normal">n</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mi>chg</mml:mi>
+</mml:mrow>
+</mml:msubsup>
+</mml:math>
+</entry>
+<entry align="left" colname="col2" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si87.svg">
+<mml:mn>23</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">A</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo>(</mml:mo>
+<mml:mn>1</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+<mml:mo>)</mml:mo>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col3" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si88.svg">
+<mml:mn>3.05</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">A</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo>(</mml:mo>
+<mml:mn>0.5</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+<mml:mo>)</mml:mo>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col4" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si89.svg">
+<mml:mn>3</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">A</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo>(</mml:mo>
+<mml:mrow>
+<mml:mo linebreak="goodbreak">≈</mml:mo>
+</mml:mrow>
+<mml:mn>1.2</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+<mml:mo>)</mml:mo>
+</mml:mrow>
+</mml:math>
+</entry>
+</row>
+<row>
+<entry align="left" colname="col1" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si90.svg">
+<mml:msubsup>
+<mml:mi>I</mml:mi>
+<mml:mrow>
+<mml:mi>cell</mml:mi>
+<mml:mo>,</mml:mo>
+<mml:mi>cut</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mi>chg</mml:mi>
+</mml:mrow>
+</mml:msubsup>
+</mml:math>
+</entry>
+<entry align="left" colname="col2" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si91.svg">
+<mml:mn>1.15</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">A</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo>(</mml:mo>
+<mml:mrow>
+<mml:mstyle mathsize="0.5em">
+<mml:mrow>
+<mml:mn>1</mml:mn>
+</mml:mrow>
+<mml:mrow>
+<mml:mo linebreak="goodbreak">/</mml:mo>
+</mml:mrow>
+<mml:mrow>
+<mml:mn>20</mml:mn>
+</mml:mrow>
+</mml:mstyle>
+</mml:mrow>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+<mml:mo>)</mml:mo>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col3" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si92.svg">
+<mml:mn>0.305</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">A</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo>(</mml:mo>
+<mml:mrow>
+<mml:mstyle mathsize="0.5em">
+<mml:mrow>
+<mml:mn>1</mml:mn>
+</mml:mrow>
+<mml:mrow>
+<mml:mo linebreak="goodbreak">/</mml:mo>
+</mml:mrow>
+<mml:mrow>
+<mml:mn>20</mml:mn>
+</mml:mrow>
+</mml:mstyle>
+</mml:mrow>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+<mml:mo>)</mml:mo>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col4" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si93.svg">
+<mml:mn>0.05</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">A</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo>(</mml:mo>
+<mml:mrow>
+<mml:mstyle mathsize="0.5em">
+<mml:mrow>
+<mml:mn>1</mml:mn>
+</mml:mrow>
+<mml:mrow>
+<mml:mo linebreak="goodbreak">/</mml:mo>
+</mml:mrow>
+<mml:mrow>
+<mml:mn>50</mml:mn>
+</mml:mrow>
+</mml:mstyle>
+</mml:mrow>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+<mml:mo>)</mml:mo>
+</mml:mrow>
+</mml:math>
+</entry>
+</row>
+<row>
+<entry align="left" colname="col1" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si94.svg">
+<mml:msubsup>
+<mml:mi>I</mml:mi>
+<mml:mrow>
+<mml:mi>cell</mml:mi>
+<mml:mo>,</mml:mo>
+<mml:mi>max</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mi>chg</mml:mi>
+</mml:mrow>
+</mml:msubsup>
+</mml:math>
+</entry>
+<entry align="left" colname="col2" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si95.svg">
+<mml:mn>100</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">A</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo>(</mml:mo>
+<mml:mrow>
+<mml:mo linebreak="goodbreak">≈</mml:mo>
+</mml:mrow>
+<mml:mn>4.4</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+<mml:mo>)</mml:mo>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col3" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si96.svg">
+<mml:mn>12.2</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">A</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo>(</mml:mo>
+<mml:mn>2</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+<mml:mo>)</mml:mo>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col4" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si97.svg">
+<mml:mn>10</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">A</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo>(</mml:mo>
+<mml:mrow>
+<mml:mo linebreak="goodbreak">≈</mml:mo>
+</mml:mrow>
+<mml:mn>3.8</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+<mml:mo>)</mml:mo>
+</mml:mrow>
+</mml:math>
+</entry>
+</row>
+<row rowsep="1">
+<entry align="left" colname="col1" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si98.svg">
+<mml:msubsup>
+<mml:mi>I</mml:mi>
+<mml:mrow>
+<mml:mi>cell</mml:mi>
+<mml:mo>,</mml:mo>
+<mml:mi>pulse</mml:mi>
+<mml:mo>,</mml:mo>
+<mml:mi>max</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mi>chg</mml:mi>
+</mml:mrow>
+</mml:msubsup>
+</mml:math>
+</entry>
+<entry align="left" colname="col2" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si99.svg">
+<mml:mn>200</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">A</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo>(</mml:mo>
+<mml:mrow>
+<mml:mo linebreak="goodbreak">≈</mml:mo>
+</mml:mrow>
+<mml:mn>8.7</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">C</mml:mi>
+<mml:mo>,</mml:mo>
+<mml:mspace></mml:mspace>
+<mml:mi>max</mml:mi>
+<mml:mo>.</mml:mo>
+</mml:mrow>
+<mml:mspace></mml:mspace>
+<mml:mn>10</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">s</mml:mi>
+</mml:mrow>
+<mml:mo>)</mml:mo>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col3" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si100.svg">
+<mml:mn>18.3</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">A</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo>(</mml:mo>
+<mml:mn>3</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">C</mml:mi>
+<mml:mo>,</mml:mo>
+<mml:mspace></mml:mspace>
+<mml:mi>max</mml:mi>
+<mml:mo>.</mml:mo>
+</mml:mrow>
+<mml:mspace></mml:mspace>
+<mml:mn>3</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">s</mml:mi>
+</mml:mrow>
+<mml:mo>)</mml:mo>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col4" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si101.svg">
+<mml:mn>26</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">A</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo>(</mml:mo>
+<mml:mn>10</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">C</mml:mi>
+<mml:mo>,</mml:mo>
+<mml:mspace></mml:mspace>
+<mml:mi>max</mml:mi>
+<mml:mo>.</mml:mo>
+</mml:mrow>
+<mml:mspace></mml:mspace>
+<mml:mn>10</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">s</mml:mi>
+</mml:mrow>
+<mml:mo>)</mml:mo>
+</mml:mrow>
+</mml:math>
+</entry>
+</row>
+<row>
+<entry align="left" colname="col1" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si102.svg">
+<mml:msub>
+<mml:mi>ϑ</mml:mi>
+<mml:mrow>
+<mml:mi>cell</mml:mi>
+<mml:mo>,</mml:mo>
+<mml:mi mathvariant="normal">n</mml:mi>
+</mml:mrow>
+</mml:msub>
+</mml:math>
+</entry>
+<entry align="left" colname="col2" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si103.svg">
+<mml:mn>25</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:msup>
+<mml:mspace></mml:mspace>
+<mml:mo>∘</mml:mo>
+</mml:msup>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col3" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si104.svg">
+<mml:mn>20</mml:mn>
+<mml:mo linebreak="goodbreak">±</mml:mo>
+<mml:mn>5</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:msup>
+<mml:mspace></mml:mspace>
+<mml:mo>∘</mml:mo>
+</mml:msup>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col4" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si105.svg">
+<mml:mn>23</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:msup>
+<mml:mspace></mml:mspace>
+<mml:mo>∘</mml:mo>
+</mml:msup>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+</row>
+<row>
+<entry align="left" colname="col1" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si106.svg">
+<mml:msubsup>
+<mml:mi>ϑ</mml:mi>
+<mml:mrow>
+<mml:mi>cell</mml:mi>
+<mml:mo>,</mml:mo>
+<mml:mi>min</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mi>dis</mml:mi>
+</mml:mrow>
+</mml:msubsup>
+<mml:mrow>
+<mml:mo linebreak="goodbreak">/</mml:mo>
+</mml:mrow>
+<mml:msubsup>
+<mml:mi>ϑ</mml:mi>
+<mml:mrow>
+<mml:mi>cell</mml:mi>
+<mml:mo>,</mml:mo>
+<mml:mi>max</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mi>dis</mml:mi>
+</mml:mrow>
+</mml:msubsup>
+</mml:math>
+</entry>
+<entry align="left" colname="col2" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si107.svg">
+<mml:mo>−</mml:mo>
+<mml:mn>30</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:msup>
+<mml:mspace></mml:mspace>
+<mml:mo>∘</mml:mo>
+</mml:msup>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo linebreak="badbreak">/</mml:mo>
+</mml:mrow>
+<mml:mn>55</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:msup>
+<mml:mspace></mml:mspace>
+<mml:mo>∘</mml:mo>
+</mml:msup>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col3" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si108.svg">
+<mml:mo>−</mml:mo>
+<mml:mn>20</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:msup>
+<mml:mspace></mml:mspace>
+<mml:mo>∘</mml:mo>
+</mml:msup>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo linebreak="badbreak">/</mml:mo>
+</mml:mrow>
+<mml:mn>60</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:msup>
+<mml:mspace></mml:mspace>
+<mml:mo>∘</mml:mo>
+</mml:msup>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col4" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si109.svg">
+<mml:mo>−</mml:mo>
+<mml:mn>30</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:msup>
+<mml:mspace></mml:mspace>
+<mml:mo>∘</mml:mo>
+</mml:msup>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo linebreak="badbreak">/</mml:mo>
+</mml:mrow>
+<mml:mn>60</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:msup>
+<mml:mspace></mml:mspace>
+<mml:mo>∘</mml:mo>
+</mml:msup>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+</row>
+<row valign="top">
+<entry align="left" colname="col1" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si110.svg">
+<mml:msubsup>
+<mml:mi>ϑ</mml:mi>
+<mml:mrow>
+<mml:mi>cell</mml:mi>
+<mml:mo>,</mml:mo>
+<mml:mi>min</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mi>chg</mml:mi>
+</mml:mrow>
+</mml:msubsup>
+<mml:mrow>
+<mml:mo linebreak="goodbreak">/</mml:mo>
+</mml:mrow>
+<mml:msubsup>
+<mml:mi>ϑ</mml:mi>
+<mml:mrow>
+<mml:mi>cell</mml:mi>
+<mml:mo>,</mml:mo>
+<mml:mi>max</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mi>chg</mml:mi>
+</mml:mrow>
+</mml:msubsup>
+</mml:math>
+</entry>
+<entry align="left" colname="col2" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si107.svg">
+<mml:mo>−</mml:mo>
+<mml:mn>30</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:msup>
+<mml:mspace></mml:mspace>
+<mml:mo>∘</mml:mo>
+</mml:msup>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo linebreak="badbreak">/</mml:mo>
+</mml:mrow>
+<mml:mn>55</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:msup>
+<mml:mspace></mml:mspace>
+<mml:mo>∘</mml:mo>
+</mml:msup>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col3" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si112.svg">
+<mml:mn>0</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:msup>
+<mml:mspace></mml:mspace>
+<mml:mo>∘</mml:mo>
+</mml:msup>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo linebreak="goodbreak">/</mml:mo>
+</mml:mrow>
+<mml:mn>45</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:msup>
+<mml:mspace></mml:mspace>
+<mml:mo>∘</mml:mo>
+</mml:msup>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col4" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si113.svg">
+<mml:mn>0</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:msup>
+<mml:mspace></mml:mspace>
+<mml:mo>∘</mml:mo>
+</mml:msup>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mo linebreak="goodbreak">/</mml:mo>
+</mml:mrow>
+<mml:mn>60</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:msup>
+<mml:mspace></mml:mspace>
+<mml:mo>∘</mml:mo>
+</mml:msup>
+<mml:mi mathvariant="normal">C</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</ce:table>
+
+[Table 11]
+<ce:table colsep="0" frame="topbot" id="tbl0010" rowsep="0" xmlns="http://www.elsevier.com/xml/common/cals/dtd">
+<ce:label>Table 2</ce:label>
+<ce:caption id="c0055">
+<ce:simple-para id="p0010" view="all">Levels of the cell’s charge cut-off voltage variation.</ce:simple-para>
+</ce:caption>
+<ce:alt-text id="alt0055" role="short">Table 2</ce:alt-text>
+<tgroup cols="7">
+<colspec align="left" colname="col1" colnum="1"></colspec>
+<colspec align="left" colname="col2" colnum="2"></colspec>
+<colspec align="left" colname="col3" colnum="3"></colspec>
+<colspec align="left" colname="col4" colnum="4"></colspec>
+<colspec align="left" colname="col5" colnum="5"></colspec>
+<colspec align="left" colname="col6" colnum="6"></colspec>
+<colspec align="left" colname="col7" colnum="7"></colspec>
+<thead>
+<row valign="top">
+<entry align="left" colname="col1" morerows="1" role="rowgroup" rowsep="1" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">Cell</entry>
+<entry align="left" colname="col2" morerows="1" role="rowgroup" rowsep="1" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si4.svg">
+<mml:msub>
+<mml:mi>i</mml:mi>
+<mml:mrow>
+<mml:mi mathvariant="normal">U</mml:mi>
+</mml:mrow>
+</mml:msub>
+</mml:math>
+</entry>
+<entry align="left" nameend="col7" namest="col3" role="colgroup" rowsep="1" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si11.svg">
+<mml:msubsup>
+<mml:mi>U</mml:mi>
+<mml:mrow>
+<mml:mi>cell</mml:mi>
+<mml:mo>,</mml:mo>
+<mml:mi>cut</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mi>chg</mml:mi>
+</mml:mrow>
+</mml:msubsup>
+</mml:math>
+</entry>
+</row>
+<row rowsep="1">
+<entry align="left" colname="col3" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">1</entry>
+<entry align="left" colname="col4" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">2</entry>
+<entry align="left" colname="col5" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">3</entry>
+<entry align="left" colname="col6" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">4</entry>
+<entry align="left" colname="col7" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">5</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry align="left" colname="col1" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">#1</entry>
+<entry align="left" colname="col2" xmlns="http://www.elsevier.com/xml/common/dtd"></entry>
+<entry align="left" colname="col3" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si116.svg">
+<mml:mn>2.7</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">V</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col4" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si117.svg">
+<mml:mn>2.55</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">V</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col5" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si118.svg">
+<mml:mn>2.4</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">V</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col6" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si119.svg">
+<mml:mn>2.25</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">V</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col7" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si120.svg">
+<mml:mn>2.1</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">V</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+</row>
+<row>
+<entry align="left" colname="col1" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">#2</entry>
+<entry align="left" colname="col2" xmlns="http://www.elsevier.com/xml/common/dtd"></entry>
+<entry align="left" colname="col3" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si121.svg">
+<mml:mn>4.2</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">V</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col4" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si122.svg">
+<mml:mn>4.1</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">V</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col5" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si123.svg">
+<mml:mn>4.0</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">V</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col6" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si124.svg">
+<mml:mn>3.9</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">V</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col7" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si125.svg">
+<mml:mn>3.8</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">V</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+</row>
+<row valign="top">
+<entry align="left" colname="col1" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">#3</entry>
+<entry align="left" colname="col2" xmlns="http://www.elsevier.com/xml/common/dtd"></entry>
+<entry align="left" colname="col3" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si126.svg">
+<mml:mn>3.6</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">V</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col4" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si127.svg">
+<mml:mn>3.45</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">V</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col5" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si128.svg">
+<mml:mn>3.4</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">V</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col6" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si129.svg">
+<mml:mn>3.35</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">V</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+<entry align="left" colname="col7" valign="top" xmlns="http://www.elsevier.com/xml/common/dtd">
+<mml:math altimg="si69.svg">
+<mml:mn>3.3</mml:mn>
+<mml:mspace></mml:mspace>
+<mml:mrow>
+<mml:mi mathvariant="normal">V</mml:mi>
+</mml:mrow>
+</mml:math>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</ce:table>
+
+
+FIGURES:
+----------------------------------------
+[Figure 1]
+Fig. 1  Flow chart of the test procedure for ERP characterization of battery cells within a restricted operating range by reducing the charge cut-off voltage.  Fig. 1
+
+[Figure 2]
+Fig. 2  CP discharge curves of battery cell #1 plotted as measured (a) voltage, (b) current, and (c) temperature signals versus discharge energy for an equidistant set of cell powers   P  cell   dis    [  i  P   ]  , ascending in the direction of the arrows. While row   i  U   = 1  represents the "base case" measurement at the full operating range, rows   i  U   = 2 -- 3  display the results for a restricted range cyclization with reduced charge cut-off voltage according to Table 2, indicated by the red lines. A reference measurement is highlighted in color to allow for line-by-line comparison. (For interpretation of the references to color in this figure legend, the reader is referred to the web version of this article.)  Fig. 2
+
+[Figure 3]
+Fig. 3  Extended Ragone plots of battery cells (a) #1, (b) #2, and (c) #3 based on the measured CP discharge curves, see Fig. 2. From each   i  U    iteration, an individual Ragone curve is illustrated in shades of gray according to the respective charge cut-off voltages applied. A reference measurement at   i  P   = 9  is highlighted in color for line-by-line comparison. The transition point at   P  cell , UI    indicates the change in electrical termination conditions. (For interpretation of the references to color in this figure legend, the reader is referred to the web version of this article.)  Fig. 3
+
+[Figure 4]
+Fig. 4  Comparison of the normalized energy deficits between the selected battery cells#1, #2, and #3 as a function of their normalized charge cut-off voltage reduction concerning the reference measurement   i  P   = 9 . Normalization is performed here by calculating the relative deviation of each measurement   i  U    from the base case as  δ  X  =  (  X   [ 1 ]  -  X   [  i  U   ]  )   /   X   [ 1 ]   for the discharge energy   E  cell   dis    and the cut-off voltage   U  cell , cut   chg   . (For interpretation of the references to color in this figure legend, the reader is referred to the web version of this article.)  Fig. 4
+
+[Figure 5]
+Fig. 5  Polarization plots of cell#1 based on the measurement results from Section 3.2, (a) the base case   (  i  U   = 1 )   in dark blue and (b) a case with reduced charge separation voltage   (  i  U   = 2 )   in light blue. The solid gray    SoC   cell    isolines evaluate the static SoC of this cell from the underlying measurements, while the dotted, light gray hyperbolas in the background indicate isolines of constant power. A corresponding reference cyclization at   i  P   = 9  is highlighted in color for line-by-line comparison, with arrows indicating the direction of the charging and discharging process. Based on this, the red lines in (b) schematically refer to the reconstruction of the electrical polarization effect, which must be determined from the termination conditions of the charging process using the    SoC   cell , cut    to recalculate the initial voltage of the subsequent discharge. (For interpretation of the references to color in this figure legend, the reader is referred to the web version of this article.)  Fig. 5
+
+[Figure 6]
+Fig. 6  Pseudo-OCV curves of battery cell#1 plotted as cell voltage versus SoC. The curves of    pOCV   chg    and    pOCV   dis    were measured at   I  cell , cut   chg   = 1.15   A   (    1   /   20      C  )   in charge and discharge direction. To obtain information about the real OCV of a cell these curves are often averaged to    pOCV   avg   . (For interpretation of the references to color in this figure legend, the reader is referred to the web version of this article.)  Fig. 6
+
+[Figure 7]
+Fig. 7  Comparison of the performance characteristics gained for cells (a)#1, (b)#2, and (c)#3 based on the measurement- and reconstruction-based approach and depending on the charge cut-off voltage reduction according to   i  U   . The ERPs of each cell are presented in the top row, with measured ones shown in shades of gray(  )and reconstructed ones in color(  ). For validation of the latter, the bottom row shows the relative deviation between the cell energies determined with both approaches as a function of the cell's set power as  δ  X  =  (  X   [  i  U   ]  -   X   ref    [  i  U   ]  )   /    X   ref    [  i  U   ]  , where    X   ref    is the measured and   X   is the reconstructed discharge energy   E  cell   dis    at each iteration   i  U   . A reference measurement at   i  P   = 9  is highlighted in orange for line-by-line comparison. The transition point at   P  cell , UI    indicates the change in electrical termination conditions. Note: Reducing cell#1's end-of-charge voltage to  2.25   V   at   i  U   = 4  leads to relative energy deviations of  δ  E  cell   dis   ≫ 50  %  and is thus not visualized in these axes. From a technical point of view, such a considerable range restriction would be of no practical relevance (cf. Fig. 4). (For interpretation of the references to color in this figure legend, the reader is referred to the web version of this article.)  Fig. 7
+
+[Figure 8]
+Fig. 8  Visualization and comparison of the SoC matching procedure with cells (a)#1, (b)#2, and (c)#3 concerning their reference discharges at   i  P   = 9 , using the relevant operating variables   U  cell    in the top row and   ϑ  cell   dis    in the bottom row as functions of    SoC   cell   . The measured signals are presented in shades of gray(  ), while the reconstructed ones are colored(  ). Additionally, the cells' pOCV curves from Section 4.1 are plotted, whereby only    pOCV   chg    is considered to determine    SoC   cell , cut    for the reconstruction-based approach, as indicated by the secondary axis. The red noncontinuous lines demonstrate the trimming procedure for each charge cut-off voltage reduction, depending on   i  U   . (For interpretation of the references to color in this figure legend, the reader is referred to the web version of this article.)  Fig. 8
+
+[Figure 9]
+Fig. 9  Evaluation of a battery cell's performance characteristics within a restricted operating range using the ERP of cell#1, involving a superposition of arbitrarily set minimum and maximum voltage limits,   U  cell , min    and   U  cell , max   . In (a), the cell voltage   U  cell    is shown as a function of discharge energy   E  cell   dis   . The adjustment of   U  cell , min    (green) represents a variation of the termination condition, while the adjustment of   U  cell , max    (red) was calculated as an initialization condition using the reconstruction-based approach. The corresponding ERP is displayed in (b), where the superposition of both single-limit Ragone curves leads to a summation of the respective energy deficits, considered here using the highlighted reference discharge at   i  P   = 9 . (For interpretation of the references to color in this figure legend, the reader is referred to the web version of this article.)  Fig. 9
+
