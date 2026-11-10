@@ -1,1 +1,58 @@
+# ===========================================================================
+# MatProGPT
+#
+# The repository ships DOIs and retrieval code, not publisher full text.
+# Anything below would either re-introduce third-party text or leak a secret,
+# so it is blocked at the git level rather than left to discipline.
+# ===========================================================================
+
+# --- Publisher full text --------------------------------------------------
+# Never commit article XML/HTML or extracted .text again. The corpus is
+# rebuilt locally with scripts/fetch_fulltext.py under your own TDM agreement.
+data/cache/
+*.xml
+*.text
+elsevier_xml/
+elsevier_text/
+elsevier_json/
+
+# --- Credentials ----------------------------------------------------------
+# run_extract_property.py reads OPENAI_API_KEY from the environment.
+.env
+.env.*
+*.key
+*.pem
+secrets.yaml
+config.local.yaml
+
+# --- Python ---------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# --- Extractor output ----------------------------------------------------
+# JSON dumps can contain source sentences. results1.json is kept only because
+# it is already tracked; delete this exception if you remove that file.
+output/*.json
+!output/results1.json
+data/*.json
+
+# --- OS / editor ---------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*~
+
+# --- Office lock files ---------------------------------------------------
+~$*
 
