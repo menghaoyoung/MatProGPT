@@ -1,4 +1,4 @@
-#### MatProGPT: Achieving Near-Perfect Fidelity in Materials Property Extraction via Multi-Modal LLMs and Dynamic Prompt Engineering
+#### MatProGPT: a Literature-Mined Database of Battery Materials Properties with Record-Level Quality Control
 
 <img width="3900" height="2786" alt="llm_Figure1" src="https://github.com/user-attachments/assets/b0a333e9-e66e-4fe0-a34e-7d65317e8c1f" />
 
